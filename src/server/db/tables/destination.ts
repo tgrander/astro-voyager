@@ -4,6 +4,7 @@ import {
   index,
   jsonb,
   numeric,
+  serial,
   text,
   timestamp,
   varchar,
@@ -14,7 +15,7 @@ import { createTable } from "@/server/db/create-table";
 export const destinations = createTable(
   "destinations",
   {
-    id: varchar("id", { length: 36 }).primaryKey(),
+    id: serial("id").primaryKey(),
     name: varchar("name", { length: 255 }).notNull(),
     description: text("description").notNull(),
     location: varchar("location", { length: 255 }).notNull(),
