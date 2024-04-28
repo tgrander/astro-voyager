@@ -2,6 +2,7 @@ import { sql } from "drizzle-orm";
 import {
   bigint,
   index,
+  integer,
   jsonb,
   numeric,
   serial,
@@ -32,10 +33,7 @@ export const destinations = createTable(
     gravity: numeric("gravity").notNull(),
     safetyRating: varchar("safety_rating", { length: 50 }),
     visitorReviews: jsonb("visitor_reviews"),
-    averageCostPerDay: numeric("average_cost_per_day", {
-      precision: 10,
-      scale: 2,
-    }),
+    averageCostPerDay: integer("average_cost_per_day").notNull(),
     bookingStatus: varchar("booking_status", { length: 50 }).notNull(),
     createdAt: timestamp("created_at")
       .default(sql`CURRENT_TIMESTAMP`)
@@ -54,5 +52,3 @@ export const destinations = createTable(
     destinationIndex: index("destination_idx").on(destinations.id),
   }),
 );
-
-// If there is a specific way to handle relations or additional functionality, it should be defined here.
