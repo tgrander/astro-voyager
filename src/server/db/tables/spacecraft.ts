@@ -1,13 +1,13 @@
 import { sql } from "drizzle-orm";
 import {
   bigint,
-  decimal,
   index,
   integer,
   json,
   jsonb,
   pgEnum,
   real,
+  serial,
   text,
   timestamp,
   varchar,
@@ -43,7 +43,7 @@ export const spacecraftStatusEnum = pgEnum("spacecraft_status", [
 export const spacecrafts = createTable(
   "spacecrafts",
   {
-    id: varchar("id", { length: 36 }).primaryKey(),
+    id: serial("id").primaryKey(),
     name: varchar("name", { length: 100 }).notNull(),
     type: spacecraftTypesEnum("type").notNull(),
     destinations: text("destinations")
