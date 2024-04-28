@@ -2,6 +2,7 @@ import type { NewSpaceCraft } from "@/server/db/helpers";
 
 export const auroraOrbiter: NewSpaceCraft = {
   name: "Aurora Orbiter",
+  slug: "aurora-orbiter",
   type: "Orbital Station Transfer",
   capacity: 20,
   pricePerDay: 2500,

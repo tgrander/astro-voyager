@@ -2,6 +2,7 @@ import type { NewDestination } from "@/server/db/helpers";
 
 export const auroraArboretum: NewDestination = {
   name: "Aurora Arboretum",
+  slug: "aurora-arboretum",
   description:
     "A zero-gravity botanical garden with a panoramic view of Earth’s aurora borealis.",
   location: "Orbit around Earth's Magnetic North Pole",

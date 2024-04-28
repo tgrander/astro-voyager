@@ -2,6 +2,7 @@ import type { NewDestination } from "@/server/db/helpers";
 
 export const silicaSandsOfIo: NewDestination = {
   name: "Silica Sands of Io",
+  slug: "silica-sands-of-io",
   description:
     "Famous for its vast electric-blue silica sand dunes, created by intense volcanic activity and electric storms.",
   location: "Io, Jupiter's Moon",

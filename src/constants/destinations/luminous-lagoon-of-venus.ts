@@ -2,6 +2,7 @@ import type { NewDestination } from "@/server/db/helpers";
 
 export const luminousLagoonOfVenus: NewDestination = {
   name: "Luminous Lagoon of Venus",
+  slug: "luminous-lagoon-of-venus",
   description:
     "Floating lagoons that glow with the light of bioluminescent algae, suspended in the acidic cloud layers of Venus.",
   location: "Cloud Cities above Venus",

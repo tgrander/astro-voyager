@@ -2,6 +2,7 @@ import type { NewSpaceCraft } from "@/server/db/helpers";
 
 export const titanSubmersible: NewSpaceCraft = {
   name: "Titan Submersible",
+  slug: "titan-submersible",
   type: "Amphibious Vehicle",
   capacity: 8,
   pricePerDay: 4000,

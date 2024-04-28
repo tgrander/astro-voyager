@@ -2,6 +2,7 @@ import type { NewSpaceCraft } from "@/server/db/helpers";
 
 export const ioSandRider: NewSpaceCraft = {
   name: "Io SandRider",
+  slug: "io-sandrider",
   type: "Rugged Explorer",
   capacity: 12,
   pricePerDay: 3500,

@@ -2,6 +2,7 @@ import type { NewSpaceCraft } from "@/server/db/helpers";
 
 export const stellarExplorer: NewSpaceCraft = {
   name: "Stellar Explorer",
+  slug: "stellar-explorer",
   type: "Long-range Cruiser",
   capacity: 150,
   pricePerDay: 5000,

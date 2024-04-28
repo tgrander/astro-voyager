@@ -2,6 +2,7 @@ import type { NewSpaceCraft } from "@/server/db/helpers";
 
 export const marsCliffhanger: NewSpaceCraft = {
   name: "Mars Cliffhanger",
+  slug: "mars-cliffhanger",
   type: "Luxury Rover",
   capacity: 8,
   pricePerDay: 7500,

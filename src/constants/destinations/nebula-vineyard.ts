@@ -2,6 +2,7 @@ import type { NewDestination } from "@/server/db/helpers";
 
 export const nebulaVineyard: NewDestination = {
   name: "Nebula Vineyard",
+  slug: "nebula-vineyard",
   description:
     "A vineyard that uses micro-gravity and cosmic radiation to grow unique grapes that produce ‘stellar’ wine.",
   location: "Floating platform in the Orion Nebula",

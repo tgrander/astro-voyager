@@ -2,6 +2,7 @@ import type { NewDestination } from "@/server/db/helpers";
 
 export const interstellarGateway: NewDestination = {
   name: "Interstellar Gateway",
+  slug: "interstellar-gateway",
   description:
     "A grand terminal floating between star systems, serving as a hub for interstellar travel, commerce, and diplomacy.",
   location: "Orbiting a dormant quasar",

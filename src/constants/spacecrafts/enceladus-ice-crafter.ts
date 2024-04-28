@@ -2,6 +2,7 @@ import type { NewSpaceCraft } from "@/server/db/helpers";
 
 export const enceladusIceCrafter: NewSpaceCraft = {
   name: "Enceladus IceCrafter",
+  slug: "enceladus-icecrafter",
   type: "Ice Explorer",
   capacity: 15,
   pricePerDay: 3800,

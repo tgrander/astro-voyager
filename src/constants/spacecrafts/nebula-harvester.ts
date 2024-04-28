@@ -2,6 +2,7 @@ import type { NewSpaceCraft } from "@/server/db/helpers";
 
 export const nebulaHarvester: NewSpaceCraft = {
   name: "Nebula Harvester",
+  slug: "nebula-harvester",
   type: "Agricultural and Scientific Research Vessel",
   capacity: 30,
   pricePerDay: 6000,

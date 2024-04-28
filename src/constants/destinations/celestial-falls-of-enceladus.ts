@@ -2,6 +2,7 @@ import type { NewDestination } from "@/server/db/helpers";
 
 export const celestialFallsOfEnceladus: NewDestination = {
   name: "Celestial Falls of Enceladus",
+  slug: "celestial-falls-of-enceladus",
   description:
     "Spectacular geysers that shoot organic material hundreds of miles above the surface, creating temporary, shimmering ice rings around the moon.",
   location: "Enceladus, Saturn's Moon",

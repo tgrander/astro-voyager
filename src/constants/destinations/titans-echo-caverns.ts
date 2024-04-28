@@ -2,6 +2,7 @@ import type { NewDestination } from "@/server/db/helpers";
 
 export const titansEchoCaverns: NewDestination = {
   name: "Titan's Echo Caverns",
+  slug: "titans-echo-caverns",
   description:
     "An extensive network of subterranean caves filled with liquid methane and ethane, echoing with the sounds of distant Titanian thunderstorms.",
   location: "Titan, Saturn's Moon",

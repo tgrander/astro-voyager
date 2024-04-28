@@ -2,6 +2,7 @@ import type { NewSpaceCraft } from "@/server/db/helpers";
 
 export const mercuryBeachcomber: NewSpaceCraft = {
   name: "Mercury Beachcomber",
+  slug: "mercury-beachcomber",
   type: "Heat-resistant Shuttle",
   capacity: 10,
   pricePerDay: 4200,

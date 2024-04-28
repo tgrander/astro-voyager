@@ -2,6 +2,7 @@ import type { NewSpaceCraft } from "@/server/db/helpers";
 
 export const interstellarGateway: NewSpaceCraft = {
   name: "Interstellar Gateway",
+  slug: "interstellar-gateway",
   type: "FTL Starship",
   capacity: 100,
   pricePerDay: 8000,

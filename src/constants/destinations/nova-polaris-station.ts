@@ -2,6 +2,7 @@ import type { NewDestination } from "@/server/db/helpers";
 
 export const novaPolarisStation: NewDestination = {
   name: "Nova Polaris Station",
+  slug: "nova-polaris-station",
   description:
     "A dazzling space station orbiting the North Star, serving as a navigational hub for deep space explorers. Known for its stunning views of the Milky Way and rich cultural heritage.",
   location: "Orbit around Polaris",

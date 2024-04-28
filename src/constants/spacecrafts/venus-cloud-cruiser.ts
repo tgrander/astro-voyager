@@ -2,6 +2,7 @@ import type { NewSpaceCraft } from "@/server/db/helpers";
 
 export const venusCloudCruiser: NewSpaceCraft = {
   name: "Venus Cloud Cruiser",
+  slug: "venus-cloud-cruiser",
   type: "High-altitude Aircraft",
   capacity: 20,
   pricePerDay: 5500,

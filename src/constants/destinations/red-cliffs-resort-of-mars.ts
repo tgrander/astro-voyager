@@ -2,6 +2,7 @@ import type { NewDestination } from "@/server/db/helpers";
 
 export const redCliffsResortOfMars: NewDestination = {
   name: "Red Cliffs Resort of Mars",
+  slug: "red-cliffs-resort-of-mars",
   description:
     "Luxury resort nestled on the edge of Mars’ Grand Canyon, with breathtaking views of the Martian landscape.",
   location: "Valles Marineris, Mars",

@@ -2,6 +2,7 @@ import type { NewDestination } from "@/server/db/helpers";
 
 export const quantumQuasarArcade: NewDestination = {
   name: "Quantum Quasar Arcade",
+  slug: "quantum-quasar-arcade",
   description:
     "A state-of-the-art entertainment complex with games powered by quantum computing, offering experiences bound only by the imagination.",
   location: "In orbit around a dormant quasar",

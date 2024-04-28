@@ -2,6 +2,7 @@ import type { NewDestination } from "@/server/db/helpers";
 
 export const plasmaBeachesOfMercury: NewDestination = {
   name: "Plasma Beaches of Mercury",
+  slug: "plasma-beaches-of-mercury",
   description:
     "Thermal beaches heated by Mercury’s intense surface temperatures, offering warm, relaxing sands year-round.",
   location: "Near Mercury’s poles",
