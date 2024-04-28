@@ -31,6 +31,8 @@ export const spacecraftTypesEnum = pgEnum("spacecraft_type", [
   "Agricultural and Scientific Research Vessel", // For Nebula Harvester
   "Luxury Rover", // For Mars Cliffhanger, a luxury exploration vehicle on Mars
   "FTL Starship", // For Interstellar Gateway, capable of faster-than-light travel
+  "Amphibious Vehicle", // For Titan Submersible and similar water/land capable vehicles
+  "Orbital Station Transfer", // For Aurora Orbiter and other spacecraft specializing in orbital transfers
 ] as const);
 
 export const spacecraftStatusEnum = pgEnum("spacecraft_status", [
