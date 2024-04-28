@@ -10,10 +10,8 @@ dotenv.config({ path: "./.env" });
 async function main() {
   console.log("Seeding started 🚀");
 
-  // Insert seed DB executions here
-  for (const spacecraft of spacecraftsData) {
-    await insertSpaceCraft(spacecraft);
-  }
+  // Insert spacecrafts
+  await Promise.all(spacecraftsData.map((sc) => insertSpaceCraft(sc)));
 
   console.log("Seeding complete 🌱");
   process.exit(0);
