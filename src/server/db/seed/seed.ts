@@ -1,18 +1,19 @@
-// env variables
 import dotenv from "dotenv";
 
-import { db } from "../index";
-import { destinations, spacecrafts } from "../schema";
+import { spacecraftsData } from "@/consts/spacecrafts";
 
+import { insertDestination, insertSpaceCraft } from "../helpers";
+
+// env variables
 dotenv.config({ path: "./.env" });
-
-export type NewSpaceCraft = typeof spacecrafts.$inferInsert;
-export type NewDestination = typeof destinations.$inferInsert;
 
 async function main() {
   console.log("Seeding started 🚀");
 
   // Insert seed DB executions here
+  for (const spacecraft of spacecraftsData) {
+    await insertSpaceCraft(spacecraft);
+  }
 
   console.log("Seeding complete 🌱");
   process.exit(0);
@@ -24,11 +25,3 @@ main()
     console.error(err);
     process.exit(0);
   });
-
-async function insertSpaceCraft(spaceCraft: NewSpaceCraft) {
-  return await db.insert(spacecrafts).values(spaceCraft).returning();
-}
-
-async function insertDestination(destination: NewDestination) {
-  return await db.insert(destinations).values(destination).returning();
-}
