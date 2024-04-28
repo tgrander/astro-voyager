@@ -7,6 +7,7 @@
     "build": "next build",
     "db:push": "drizzle-kit push:pg",
     "db:studio": "drizzle-kit studio",
+    "db:seed": "tsc src/server/db/seed/seed",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start"
@@ -17,6 +18,7 @@
     "@trpc/client": "next",
     "@trpc/react-query": "next",
     "@trpc/server": "next",
+    "@vercel/postgres": "^0.8.0",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.29.4",
     "next": "^14.2.1",
