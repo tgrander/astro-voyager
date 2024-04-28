@@ -6,7 +6,7 @@ export const titansEchoCaverns: NewDestination = {
     "An extensive network of subterranean caves filled with liquid methane and ethane, echoing with the sounds of distant Titanian thunderstorms.",
   location: "Titan, Saturn's Moon",
   coordinates: "15°S, 75°E",
-  distanceFromEarth: 1220000000,
+  distanceFromEarth: "1.2 billion kilometers away",
   travelTime: "7 years",
   attractions: [
     "Submarine tours",
@@ -21,7 +21,7 @@ export const titansEchoCaverns: NewDestination = {
   imageUrls: ["https://example.com/images/titans_echo_caverns.jpg"],
   virtualTourUrl: "https://example.com/virtual_tours/titans_echo_caverns",
   climate: "Subterranean liquid methane",
-  gravity: "0.14", // Relative to Earth
+  gravity: "Variable Gravity Caves",
   safetyRating: "A",
   visitorReviews: [
     "The submarine tour was like visiting another world!",

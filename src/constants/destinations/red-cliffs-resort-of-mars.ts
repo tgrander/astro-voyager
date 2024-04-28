@@ -6,7 +6,8 @@ export const redCliffsResortOfMars: NewDestination = {
     "Luxury resort nestled on the edge of Mars’ Grand Canyon, with breathtaking views of the Martian landscape.",
   location: "Valles Marineris, Mars",
   coordinates: "14°S, 59°W",
-  distanceFromEarth: 54600000,
+  distanceFromEarth:
+    "Approximately 56 to 401 million kilometers away, varying with planetary orbits",
   travelTime: "6 months",
   attractions: ["Cliffside villas", "Guided canyon tours", "Orbital skydiving"],
   amenities: [
@@ -17,7 +18,7 @@ export const redCliffsResortOfMars: NewDestination = {
   imageUrls: ["https://example.com/images/red_cliffs_resort.jpg"],
   virtualTourUrl: "https://example.com/virtual_tours/red_cliffs_resort",
   climate: "Controlled indoor climate; harsh outside",
-  gravity: "0.38",
+  gravity: "Low Martian Gravity",
   safetyRating: "A",
   visitorReviews: [
     "The view was literally out of this world!",

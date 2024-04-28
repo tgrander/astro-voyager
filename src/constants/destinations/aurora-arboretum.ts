@@ -6,7 +6,7 @@ export const auroraArboretum: NewDestination = {
     "A zero-gravity botanical garden with a panoramic view of Earth’s aurora borealis.",
   location: "Orbit around Earth's Magnetic North Pole",
   coordinates: "Geomagnetic North",
-  distanceFromEarth: 400, // km above Earth
+  distanceFromEarth: "Orbiting directly above the Earth",
   travelTime: "1 hour from Earth surface shuttle",
   attractions: [
     "Guided meditation sessions",

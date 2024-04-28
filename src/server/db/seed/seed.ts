@@ -1,11 +1,14 @@
+import { insertDestinationsData } from "@/db/seed/destinations";
 import { insertSpaceCraftsData } from "@/db/seed/spacecrafts";
 
 // Main function
 async function main() {
   console.log("Seeding started 🚀");
 
-  // Insert spacecrafts
+  // SPACECRAFTS
   await insertSpaceCraftsData();
+  // DESTINATIONS
+  await insertDestinationsData();
 
   console.log("Seeding complete 🌱");
   process.exit(0);

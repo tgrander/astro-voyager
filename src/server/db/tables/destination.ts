@@ -21,8 +21,8 @@ export const destinations = createTable(
     description: text("description").notNull(),
     location: varchar("location", { length: 255 }).notNull(),
     coordinates: varchar("coordinates", { length: 100 }).notNull(),
-    distanceFromEarth: bigint("distance_from_earth", {
-      mode: "number",
+    distanceFromEarth: varchar("distance_from_earth", {
+      length: 255,
     }).notNull(),
     travelTime: varchar("travel_time", { length: 100 }).notNull(),
     attractions: jsonb("attractions").notNull(),
@@ -30,7 +30,7 @@ export const destinations = createTable(
     imageUrls: jsonb("image_urls").notNull(),
     virtualTourUrl: varchar("virtual_tour_url", { length: 255 }),
     climate: varchar("climate", { length: 255 }),
-    gravity: numeric("gravity").notNull(),
+    gravity: varchar("gravity", { length: 255 }).notNull(),
     safetyRating: varchar("safety_rating", { length: 50 }),
     visitorReviews: jsonb("visitor_reviews"),
     averageCostPerDay: integer("average_cost_per_day").notNull(),

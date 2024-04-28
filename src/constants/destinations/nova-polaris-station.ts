@@ -6,7 +6,7 @@ export const novaPolarisStation: NewDestination = {
     "A dazzling space station orbiting the North Star, serving as a navigational hub for deep space explorers. Known for its stunning views of the Milky Way and rich cultural heritage.",
   location: "Orbit around Polaris",
   coordinates: "0°0'N, 0°0'E",
-  distanceFromEarth: 433000000000,
+  distanceFromEarth: "4,500 light-years away",
   travelTime: "6 months",
   attractions: [
     "Zero-gravity dance halls",
@@ -21,7 +21,7 @@ export const novaPolarisStation: NewDestination = {
   imageUrls: ["https://example.com/images/nova_polaris_main.jpg"],
   virtualTourUrl: "https://example.com/virtual_tours/nova_polaris",
   climate: "Controlled space environment",
-  gravity: "0",
+  gravity: "Artificial Gravity Hubs",
   safetyRating: "A+",
   visitorReviews: [
     "An unforgettable journey!",

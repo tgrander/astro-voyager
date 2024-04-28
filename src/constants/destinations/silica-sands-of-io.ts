@@ -6,7 +6,7 @@ export const silicaSandsOfIo: NewDestination = {
     "Famous for its vast electric-blue silica sand dunes, created by intense volcanic activity and electric storms.",
   location: "Io, Jupiter's Moon",
   coordinates: "18°N, 55°W",
-  distanceFromEarth: 628000000,
+  distanceFromEarth: "628 million kilometers away",
   travelTime: "1.5 years",
   attractions: [
     "Sand surfing",
@@ -17,7 +17,7 @@ export const silicaSandsOfIo: NewDestination = {
   imageUrls: ["https://example.com/images/silica_sands_io.jpg"],
   virtualTourUrl: "https://example.com/virtual_tours/silica_sands_io",
   climate: "Extreme volcanic",
-  gravity: "0.183", // Relative to Earth
+  gravity: "Reduced Gravity Fields",
   safetyRating: "B",
   visitorReviews: [
     "The electric storms are like nothing else in the solar system!",

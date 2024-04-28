@@ -6,7 +6,7 @@ export const nebulaVineyard: NewDestination = {
     "A vineyard that uses micro-gravity and cosmic radiation to grow unique grapes that produce ‘stellar’ wine.",
   location: "Floating platform in the Orion Nebula",
   coordinates: "Orion Arm, Milky Way",
-  distanceFromEarth: 1350, // in light years
+  distanceFromEarth: "1,300 light-years away",
   travelTime: "Variable, depending on FTL capabilities",
   attractions: [
     "Wine tasting",

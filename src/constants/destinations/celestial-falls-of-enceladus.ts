@@ -6,7 +6,7 @@ export const celestialFallsOfEnceladus: NewDestination = {
     "Spectacular geysers that shoot organic material hundreds of miles above the surface, creating temporary, shimmering ice rings around the moon.",
   location: "Enceladus, Saturn's Moon",
   coordinates: "South Polar Region",
-  distanceFromEarth: 1483000000,
+  distanceFromEarth: "1.5 billion kilometers away",
   travelTime: "7 years",
   attractions: [
     "Ice sculpting workshops",
@@ -21,7 +21,7 @@ export const celestialFallsOfEnceladus: NewDestination = {
   imageUrls: ["https://example.com/images/celestial_falls_enceladus.jpg"],
   virtualTourUrl: "https://example.com/virtual_tours/celestial_falls_enceladus",
   climate: "Sub-zero, icy",
-  gravity: "0.113",
+  gravity: "Near-weightless Conditions",
   safetyRating: "A",
   visitorReviews: [
     "Geyser surfing was like nothing I've ever done!",

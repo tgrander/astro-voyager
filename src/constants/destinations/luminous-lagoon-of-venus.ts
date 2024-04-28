@@ -6,7 +6,7 @@ export const luminousLagoonOfVenus: NewDestination = {
     "Floating lagoons that glow with the light of bioluminescent algae, suspended in the acidic cloud layers of Venus.",
   location: "Cloud Cities above Venus",
   coordinates: "Latitude: -20°, Longitude: 132°",
-  distanceFromEarth: 40000000,
+  distanceFromEarth: "40 million kilometers away at closest approach",
   travelTime: "4 months",
   attractions: ["Bioluminescent light shows", "Sky sailing", "Cloud fishing"],
   amenities: ["Luxury accommodations", "Observation decks", "Scientific labs"],

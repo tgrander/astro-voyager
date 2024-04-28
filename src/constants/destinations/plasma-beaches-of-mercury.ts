@@ -6,7 +6,7 @@ export const plasmaBeachesOfMercury: NewDestination = {
     "Thermal beaches heated by Mercury’s intense surface temperatures, offering warm, relaxing sands year-round.",
   location: "Near Mercury’s poles",
   coordinates: "85°N, 60°E",
-  distanceFromEarth: 91000000,
+  distanceFromEarth: "77 million kilometers at its closest approach",
   travelTime: "3 months",
   attractions: [
     "Sunbathing under solar shields",
@@ -17,7 +17,7 @@ export const plasmaBeachesOfMercury: NewDestination = {
   imageUrls: ["https://example.com/images/plasma_beaches_mercury.jpg"],
   virtualTourUrl: "https://example.com/virtual_tours/plasma_beaches_mercury",
   climate: "Controlled thermal environments",
-  gravity: "0.38",
+  gravity: "Enhanced Gravity Wells",
   safetyRating: "A",
   visitorReviews: [
     "The closest you can get to the Sun without frying!",
