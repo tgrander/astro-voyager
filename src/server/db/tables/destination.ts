@@ -1,10 +1,8 @@
 import { sql } from "drizzle-orm";
 import {
-  bigint,
   index,
   integer,
   jsonb,
-  numeric,
   serial,
   text,
   timestamp,
