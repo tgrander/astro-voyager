@@ -13,7 +13,7 @@ import {
   varchar,
 } from "drizzle-orm/pg-core";
 
-import { createTable } from "@/server/db/create-table";
+import { createTable } from "../create-table";
 
 export const spacecraftTypesEnum = pgEnum("spacecraft_type", [
   "Long-range Cruiser", // For Stellar Explorer and similar vessels

@@ -10,7 +10,7 @@ import {
   varchar,
 } from "drizzle-orm/pg-core";
 
-import { createTable } from "@/server/db/create-table";
+import { createTable } from "../create-table";
 
 export const destinations = createTable(
   "destinations",

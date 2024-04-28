@@ -1,12 +1,16 @@
 import dotenv from "dotenv";
 
-import { spacecraftsData } from "@/consts/spacecrafts";
-
-import { insertDestination, insertSpaceCraft } from "../helpers";
+import { spacecraftsData } from "@/constants";
+import { insertSpaceCraft } from "@/server/db/helpers";
 
 // env variables
 dotenv.config({ path: "./.env" });
 
+// Check if DATABASE_URL is set
+if (!("DATABASE_URL" in process.env))
+  throw new Error("DATABASE_URL not found on .env");
+
+// Main function
 async function main() {
   console.log("Seeding started 🚀");
 
@@ -17,6 +21,7 @@ async function main() {
   process.exit(0);
 }
 
+// Run main function
 main()
   .then()
   .catch((err) => {
