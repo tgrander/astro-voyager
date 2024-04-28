@@ -3,7 +3,7 @@ import { insertSpaceCraftsData } from "@/db/seed/spacecrafts";
 
 // Main function
 async function main() {
-  console.log("Seeding started 🚀");
+  console.log("Seeding started ⏰");
 
   // SPACECRAFTS
   await insertSpaceCraftsData();
