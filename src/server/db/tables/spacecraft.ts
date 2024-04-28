@@ -46,8 +46,8 @@ export const spacecrafts = createTable(
   "spacecrafts",
   {
     id: serial("id").primaryKey(),
-    name: varchar("name", { length: 100 }).notNull(),
-    slug: varchar("slug", { length: 255 }).notNull(),
+    name: varchar("name", { length: 100 }).notNull().unique(),
+    slug: varchar("slug", { length: 255 }).notNull().unique(),
     type: spacecraftTypesEnum("type").notNull(),
     destinations: text("destinations")
       .array()

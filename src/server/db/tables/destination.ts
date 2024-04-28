@@ -15,8 +15,8 @@ export const destinations = createTable(
   "destinations",
   {
     id: serial("id").primaryKey(),
-    name: varchar("name", { length: 155 }).notNull(),
-    slug: varchar("slug", { length: 255 }).notNull(),
+    name: varchar("name", { length: 155 }).notNull().unique(),
+    slug: varchar("slug", { length: 255 }).notNull().unique(),
     description: text("description").notNull(),
     location: varchar("location", { length: 255 }).notNull(),
     coordinates: varchar("coordinates", { length: 100 }).notNull(),
