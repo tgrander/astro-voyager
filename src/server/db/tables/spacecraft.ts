@@ -1,4 +1,4 @@
-import { sql } from "drizzle-orm";
+import { relations, sql } from "drizzle-orm";
 import {
   bigint,
   decimal,
@@ -32,6 +32,10 @@ export const spacecrafts = createTable(
     id: varchar("id", { length: 36 }).primaryKey(),
     name: varchar("name", { length: 100 }).notNull(),
     type: spacecraftTypesEnum("type").notNull(),
+    destinations: text("destinations")
+      .array()
+      .notNull()
+      .$default(() => []), // array of destination IDs
     capacity: bigint("capacity", { mode: "number" }).notNull(),
     pricePerDay: decimal("price_per_day", {
       precision: 10,
