@@ -5,7 +5,9 @@ import {
   index,
   integer,
   json,
+  jsonb,
   pgEnum,
+  real,
   text,
   timestamp,
   varchar,
@@ -50,7 +52,7 @@ export const spacecrafts = createTable(
       .$default(() => []), // array of destination IDs
     capacity: bigint("capacity", { mode: "number" }).notNull(),
     pricePerDay: integer("price_per_day").notNull(),
-    reviewScore: decimal("review_score", { precision: 3, scale: 2 }),
+    reviewScore: real("review_score"),
     imageUrl: text("image_url"),
     heroImage: text("hero_image"),
     virtualTourUrl: text("virtual_tour_url"),
@@ -87,6 +89,13 @@ export const spacecrafts = createTable(
     status: spacecraftStatusEnum("status").notNull(),
     hostId: varchar("host_id", { length: 36 }).notNull(),
     captainId: varchar("captain_id", { length: 36 }),
+    popularActivities: jsonb("popular_activities").notNull(),
+    seasonalVariations: text("seasonal_variations"),
+    accessibility: text("accessibility"),
+    researchFacilities: text("research_facilities"),
+    culturalSignificance: text("cultural_significance"),
+    historicalEvents: jsonb("historical_events"),
+
     // Date fields
     createdAt: timestamp("created_at")
       .default(sql`CURRENT_TIMESTAMP`)
