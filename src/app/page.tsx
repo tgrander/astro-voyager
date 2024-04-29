@@ -1,3 +1,7 @@
 export default async function Home() {
-  return <div>HELLO WORLD</div>;
+  return (
+    <div className="flex h-full w-full items-center justify-center">
+      HELLO WORLD
+    </div>
+  );
 }
