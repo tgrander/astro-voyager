@@ -22,10 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full bg-white">
+    <html lang="en" className="h-full w-full bg-slate-950">
       <body
         className={cn(
-          "h-full w-full bg-gray-50 font-sans antialiased",
+          "h-full w-full bg-slate-950 font-sans antialiased",
           inter.variable,
         )}
       >

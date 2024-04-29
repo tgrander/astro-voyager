@@ -5,7 +5,7 @@ export default async function Home() {
   console.log(spacecrafts);
 
   return (
-    <div className="flex h-full w-full items-center justify-center">
+    <div className="flex h-full w-full items-center justify-center text-white">
       HELLO WORLD
     </div>
   );
