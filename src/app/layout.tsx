@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 
 import { Inter } from "next/font/google";
 
-import { TRPCReactProvider } from "@/trpc/react";
+import { Providers } from "@/app/providers";
 import { cn } from "@/utils";
 
 const inter = Inter({
@@ -35,7 +35,7 @@ export default function RootLayout({
           inter.variable,
         )}
       >
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
