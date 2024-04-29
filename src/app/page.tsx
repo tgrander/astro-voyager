@@ -7,13 +7,16 @@ export default async function Home() {
 
   return (
     <div className="flex h-full w-full items-center justify-center text-white">
-      {spacecrafts.map((spacecraft) => {
-        return (
-          <div key={spacecraft.id} className="grid grid-cols-3 gap-6">
-            <SpacecraftListingCard spacecraft={spacecraft} />
-          </div>
-        );
-      })}
+      <section className="grid grid-cols-3 gap-6">
+        {spacecrafts.map((spacecraft) => {
+          return (
+            <SpacecraftListingCard
+              key={spacecraft.id}
+              spacecraft={spacecraft}
+            />
+          );
+        })}
+      </section>
     </div>
   );
 }

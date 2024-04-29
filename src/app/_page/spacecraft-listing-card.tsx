@@ -15,8 +15,8 @@ export function SpacecraftListingCard(props: Props) {
       <CldImage
         alt="Woman listing to music"
         className="object-cover"
-        height={200}
-        width={200}
+        height={400}
+        width={400}
         src={props.spacecraft.heroImage ?? ""}
       />
       <CardFooter className="border-1 rounded-large shadow-small absolute bottom-1 z-10 ml-1 w-[calc(100%_-_8px)] justify-between overflow-hidden border-white/20 py-1 before:rounded-xl before:bg-white/10">
