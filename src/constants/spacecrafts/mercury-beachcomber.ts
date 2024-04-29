@@ -8,9 +8,7 @@ export const mercuryBeachcomber: NewSpaceCraft = {
   capacity: 10,
   pricePerDay: 4200,
   reviewScore: 4.7,
-  imageUrl: "https://example.com/images/mercury_beachcomber_main.jpg",
-  heroImage: "https://example.com/images/mercury_beachcomber_hero.jpg",
-  virtualTourUrl: "https://example.com/virtual_tours/mercury_beachcomber",
+  heroImage: "skywalker/mercury-beachcomber_hqnhr3",
   dimensions: {
     length: 15,
     width: 6,

@@ -15,11 +15,7 @@ export const interstellarGateway: NewDestination = {
     "Galactic diplomacy centers",
   ],
   amenities: ["Trade markets", "Conference centers", "Cultural exhibits"],
-  imageUrls: [
-    "https://example.com/images/interstellar_gateway_main.jpg",
-    "https://example.com/images/interstellar_gateway_overview.jpg",
-  ],
-  virtualTourUrl: "https://example.com/virtual_tours/interstellar_gateway",
+  imageUrls: [],
   climate: "Controlled environmental conditions",
   gravity: "Adjustable gravity fields",
   safetyRating: "AAA",

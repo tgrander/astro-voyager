@@ -8,9 +8,7 @@ export const enceladusIceCrafter: NewSpaceCraft = {
   capacity: 15,
   pricePerDay: 3800,
   reviewScore: 4.8,
-  imageUrl: "https://example.com/images/enceladus_icecrafter_main.jpg",
-  heroImage: "https://example.com/images/enceladus_icecrafter_hero.jpg",
-  virtualTourUrl: "https://example.com/virtual_tours/enceladus_icecrafter",
+  heroImage: "skywalker/enceladus-ice-crafter_rtao1u",
   dimensions: {
     length: 25,
     width: 8,

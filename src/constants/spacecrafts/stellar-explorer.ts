@@ -8,9 +8,7 @@ export const stellarExplorer: NewSpaceCraft = {
   capacity: 150,
   pricePerDay: 5000,
   reviewScore: 4.8,
-  imageUrl: "https://example.com/images/stellar_explorer_main.jpg",
-  heroImage: "https://example.com/images/stellar_explorer_hero.jpg",
-  virtualTourUrl: "https://example.com/virtual_tours/stellar_explorer",
+  heroImage: "skywalker/stellar-explorer_ylqqvo",
   dimensions: {
     length: 320,
     width: 145,

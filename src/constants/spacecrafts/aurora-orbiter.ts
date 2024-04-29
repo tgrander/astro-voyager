@@ -8,9 +8,7 @@ export const auroraOrbiter: NewSpaceCraft = {
   capacity: 20,
   pricePerDay: 2500,
   reviewScore: 4.6,
-  imageUrl: "https://example.com/images/aurora_orbiter_main.jpg",
-  heroImage: "https://example.com/images/aurora_orbiter_hero.jpg",
-  virtualTourUrl: "https://example.com/virtual_tours/aurora_orbiter",
+  heroImage: "skywalker/venus-cloud-cruiser_hc9slm",
   dimensions: {
     length: 30,
     width: 10,

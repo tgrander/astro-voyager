@@ -8,9 +8,7 @@ export const interstellarGateway: NewSpaceCraft = {
   capacity: 100,
   pricePerDay: 8000,
   reviewScore: 4.95,
-  imageUrl: "https://example.com/images/interstellar_gateway_main.jpg",
-  heroImage: "https://example.com/images/interstellar_gateway_hero.jpg",
-  virtualTourUrl: "https://example.com/virtual_tours/interstellar_gateway",
+  heroImage: "skywalker/interstellar-gateway_heme1v",
   dimensions: {
     length: 300,
     width: 50,

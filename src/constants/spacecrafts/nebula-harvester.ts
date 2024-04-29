@@ -8,9 +8,7 @@ export const nebulaHarvester: NewSpaceCraft = {
   capacity: 30,
   pricePerDay: 6000,
   reviewScore: 4.9,
-  imageUrl: "https://example.com/images/nebula_harvester_main.jpg",
-  heroImage: "https://example.com/images/nebula_harvester_hero.jpg",
-  virtualTourUrl: "https://example.com/virtual_tours/nebula_harvester",
+  heroImage: "skywalker/nebula-harvester_argotr",
   dimensions: {
     length: 50,
     width: 15,

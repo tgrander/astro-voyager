@@ -8,9 +8,7 @@ export const marsCliffhanger: NewSpaceCraft = {
   capacity: 8,
   pricePerDay: 7500,
   reviewScore: 5.0,
-  imageUrl: "https://example.com/images/mars_cliffhanger_main.jpg",
-  heroImage: "https://example.com/images/mars_cliffhanger_hero.jpg",
-  virtualTourUrl: "https://example.com/virtual_tours/mars_cliffhanger",
+  heroImage: "skywalker/mars-cliffhanger_ogb0dv",
   dimensions: {
     length: 12,
     width: 4,

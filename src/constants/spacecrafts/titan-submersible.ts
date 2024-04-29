@@ -8,9 +8,7 @@ export const titanSubmersible: NewSpaceCraft = {
   capacity: 8,
   pricePerDay: 4000,
   reviewScore: 4.7,
-  imageUrl: "https://example.com/images/titan_submersible_main.jpg",
-  heroImage: "https://example.com/images/titan_submersible_hero.jpg",
-  virtualTourUrl: "https://example.com/virtual_tours/titan_submersible",
+  heroImage: "skywalker/titan-submersible_saah5o",
   dimensions: {
     length: 12,
     width: 4,

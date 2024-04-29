@@ -8,9 +8,7 @@ export const ioSandRider: NewSpaceCraft = {
   capacity: 12,
   pricePerDay: 3500,
   reviewScore: 4.9,
-  imageUrl: "https://example.com/images/io_sandrider_main.jpg",
-  heroImage: "https://example.com/images/io_sandrider_hero.jpg",
-  virtualTourUrl: "https://example.com/virtual_tours/io_sandrider",
+  heroImage: "skywalker/io-sandrider_qqcmz7",
   dimensions: {
     length: 10,
     width: 5,

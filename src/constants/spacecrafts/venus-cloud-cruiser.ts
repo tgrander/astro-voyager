@@ -8,9 +8,7 @@ export const venusCloudCruiser: NewSpaceCraft = {
   capacity: 20,
   pricePerDay: 5500,
   reviewScore: 4.9,
-  imageUrl: "https://example.com/images/venus_cloud_cruiser_main.jpg",
-  heroImage: "https://example.com/images/venus_cloud_cruiser_hero.jpg",
-  virtualTourUrl: "https://example.com/virtual_tours/venus_cloud_cruiser",
+  heroImage: "skywalker/venus-cloud-cruiser_hc9slm",
   dimensions: {
     length: 18,
     width: 10,

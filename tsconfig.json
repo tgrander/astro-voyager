@@ -30,7 +30,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@/db/*": ["./src/server/db/*"]
+      "@/db/*": ["./src/server/db/*"],
+      "@/api/*": ["./src/server/api/*"]
     }
   },
   "include": [
