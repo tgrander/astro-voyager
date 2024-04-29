@@ -6,7 +6,7 @@ export default async function Home() {
   const spacecrafts = await api.spacecraft.search();
 
   return (
-    <div className="flex h-full w-full items-center justify-center text-white">
+    <div className="flex min-h-full w-full items-center justify-center text-white">
       <section className="grid grid-cols-3 gap-6">
         {spacecrafts.map((spacecraft) => {
           return (

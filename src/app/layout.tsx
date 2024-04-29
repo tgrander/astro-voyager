@@ -25,7 +25,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        "h-full w-full bg-slate-950",
+        "w-full min-w-full bg-slate-950",
         "dark", // dark mode
       )}
     >
