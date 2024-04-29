@@ -14,7 +14,7 @@ export function SpacecraftListingCard(props: Props) {
     <Card isFooterBlurred radius="lg" className="border-none">
       <CldImage
         alt="Woman listing to music"
-        className="object-cover"
+        className="rounded-lg object-cover"
         height={400}
         width={400}
         src={props.spacecraft.heroImage ?? ""}
