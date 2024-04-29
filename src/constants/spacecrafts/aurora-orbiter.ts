@@ -4,6 +4,7 @@ export const auroraOrbiter: NewSpaceCraft = {
   name: "Aurora Orbiter",
   slug: "aurora-orbiter",
   type: "Orbital Station Transfer",
+  destinations: ["aurora-arboretum", "orbital-oasis"],
   capacity: 20,
   pricePerDay: 2500,
   reviewScore: 4.6,

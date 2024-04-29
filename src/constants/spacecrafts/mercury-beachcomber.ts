@@ -4,6 +4,7 @@ export const mercuryBeachcomber: NewSpaceCraft = {
   name: "Mercury Beachcomber",
   slug: "mercury-beachcomber",
   type: "Heat-resistant Shuttle",
+  destinations: ["plasma-beaches-of-mercury"],
   capacity: 10,
   pricePerDay: 4200,
   reviewScore: 4.7,

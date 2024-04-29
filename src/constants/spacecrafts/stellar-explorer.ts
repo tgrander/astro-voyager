@@ -4,6 +4,7 @@ export const stellarExplorer: NewSpaceCraft = {
   name: "Stellar Explorer",
   slug: "stellar-explorer",
   type: "Long-range Cruiser",
+  destinations: ["nova-polaris-station", "quantum-quay"],
   capacity: 150,
   pricePerDay: 5000,
   reviewScore: 4.8,

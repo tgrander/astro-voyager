@@ -4,6 +4,7 @@ export const venusCloudCruiser: NewSpaceCraft = {
   name: "Venus Cloud Cruiser",
   slug: "venus-cloud-cruiser",
   type: "High-altitude Aircraft",
+  destinations: ["luminous-lagoon-of-venus"],
   capacity: 20,
   pricePerDay: 5500,
   reviewScore: 4.9,

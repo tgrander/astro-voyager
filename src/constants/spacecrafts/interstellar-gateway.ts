@@ -4,6 +4,7 @@ export const interstellarGateway: NewSpaceCraft = {
   name: "Interstellar Gateway",
   slug: "interstellar-gateway",
   type: "FTL Starship",
+  destinations: ["galactic-gateway", "starforge-station"],
   capacity: 100,
   pricePerDay: 8000,
   reviewScore: 4.95,

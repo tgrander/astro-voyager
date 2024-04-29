@@ -4,6 +4,7 @@ export const ioSandRider: NewSpaceCraft = {
   name: "Io SandRider",
   slug: "io-sandrider",
   type: "Rugged Explorer",
+  destinations: ["silica-sands-of-io"],
   capacity: 12,
   pricePerDay: 3500,
   reviewScore: 4.9,

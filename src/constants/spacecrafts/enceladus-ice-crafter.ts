@@ -4,6 +4,7 @@ export const enceladusIceCrafter: NewSpaceCraft = {
   name: "Enceladus IceCrafter",
   slug: "enceladus-icecrafter",
   type: "Ice Explorer",
+  destinations: ["celestial-falls-of-enceladus"],
   capacity: 15,
   pricePerDay: 3800,
   reviewScore: 4.8,

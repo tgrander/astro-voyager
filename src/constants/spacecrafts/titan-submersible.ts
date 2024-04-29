@@ -4,6 +4,7 @@ export const titanSubmersible: NewSpaceCraft = {
   name: "Titan Submersible",
   slug: "titan-submersible",
   type: "Amphibious Vehicle",
+  destinations: ["titans-echo-caverns"],
   capacity: 8,
   pricePerDay: 4000,
   reviewScore: 4.7,

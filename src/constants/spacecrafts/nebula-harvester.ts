@@ -4,6 +4,7 @@ export const nebulaHarvester: NewSpaceCraft = {
   name: "Nebula Harvester",
   slug: "nebula-harvester",
   type: "Agricultural and Scientific Research Vessel",
+  destinations: ["nebula-vineyard"],
   capacity: 30,
   pricePerDay: 6000,
   reviewScore: 4.9,

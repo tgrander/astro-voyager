@@ -4,6 +4,7 @@ export const marsCliffhanger: NewSpaceCraft = {
   name: "Mars Cliffhanger",
   slug: "mars-cliffhanger",
   type: "Luxury Rover",
+  destinations: ["red-cliffs-resort-of-mars"],
   capacity: 8,
   pricePerDay: 7500,
   reviewScore: 5.0,
