@@ -22,7 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full w-full bg-slate-950">
+    <html
+      lang="en"
+      className={cn(
+        "h-full w-full bg-slate-950",
+        "dark", // dark mode
+      )}
+    >
       <body
         className={cn(
           "h-full w-full bg-slate-950 font-sans antialiased",
