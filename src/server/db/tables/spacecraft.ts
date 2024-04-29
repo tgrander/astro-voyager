@@ -57,7 +57,7 @@ export const spacecrafts = createTable(
     pricePerDay: integer("price_per_day").notNull(),
     reviewScore: real("review_score"),
     imageUrl: text("image_url"),
-    heroImage: text("hero_image"),
+    heroImage: text("hero_image"), // Cloudinary public ID
     virtualTourUrl: text("virtual_tour_url"),
     dimensions: json("dimensions")
       .$type<{

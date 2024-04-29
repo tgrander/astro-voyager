@@ -26,6 +26,7 @@ export const destinations = createTable(
     travelTime: varchar("travel_time", { length: 100 }).notNull(),
     attractions: jsonb("attractions").notNull(),
     amenities: jsonb("amenities").notNull(),
+    heroImage: text("hero_image"), // Cloudinary public ID
     imageUrls: jsonb("image_urls").notNull(),
     virtualTourUrl: varchar("virtual_tour_url", { length: 255 }),
     climate: varchar("climate", { length: 255 }),
@@ -34,18 +35,20 @@ export const destinations = createTable(
     visitorReviews: jsonb("visitor_reviews"),
     averageCostPerDay: integer("average_cost_per_day").notNull(),
     bookingStatus: varchar("booking_status", { length: 50 }).notNull(),
-    createdAt: timestamp("created_at")
-      .default(sql`CURRENT_TIMESTAMP`)
-      .notNull(),
-    updatedAt: timestamp("updated_at")
-      .default(sql`CURRENT_TIMESTAMP`)
-      .notNull(),
     popularActivities: jsonb("popular_activities"),
     seasonalVariations: text("seasonal_variations"),
     accessibility: text("accessibility"),
     researchFacilities: text("research_facilities"),
     culturalSignificance: text("cultural_significance"),
     historicalEvents: jsonb("historical_events"),
+
+    // Date fields
+    createdAt: timestamp("created_at")
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
+    updatedAt: timestamp("updated_at")
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
   },
   (destinations) => ({
     destinationIndex: index("destination_idx").on(destinations.id),

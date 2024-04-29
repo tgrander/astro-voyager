@@ -15,6 +15,13 @@
       "when": 1714341393621,
       "tag": "0001_zippy_shape",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1714369446556,
+      "tag": "0002_tan_squadron_supreme",
+      "breakpoints": true
     }
   ]
 }
