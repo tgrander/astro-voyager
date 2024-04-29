@@ -1,13 +1,11 @@
-import { eq } from "drizzle-orm";
 import { z } from "zod";
 
-import { spacecrafts } from "@/db/schema";
 import { publicProcedure } from "@/server/api/trpc";
 
 ////////////////////////
 // TYPES
 ////////////////////////
-const searchSpaceCraftsSchema = z
+export const searchSpaceCraftsSchema = z
   .object({
     destinationSlug: z.number().optional(),
     fromDate: z.string().optional(), // Dates as ISO string (could also use z.date() if Date objects are preferred)
@@ -22,11 +20,13 @@ const searchSpaceCraftsSchema = z
   })
   .strict();
 
+export type SearchSpaceCrafts = z.infer<typeof searchSpaceCraftsSchema>;
+
 ////////////////////////
 // ROUTE HANDLER
 ////////////////////////
 export const search = publicProcedure
-  .input(searchSpaceCraftsSchema)
+  .input(searchSpaceCraftsSchema.optional())
   .query(async ({ ctx }) => {
     const results = await ctx.db.query.spacecrafts.findMany();
 
