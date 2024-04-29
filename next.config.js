@@ -11,6 +11,16 @@ const config = {
   experimental: {
     typedRoutes: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        port: "",
+        pathname: "/dfjcoifwd/image/upload/v1714366069/skywalker/**",
+      },
+    ],
+  },
 };
 
 export default config;
