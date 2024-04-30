@@ -3,7 +3,7 @@ import { getCldImageUrl } from "next-cloudinary";
 import { api } from "@/trpc/server";
 import { cn } from "@/utils";
 
-import { DestinationsList } from "./_page";
+import { DestinationDetails, DestinationsList } from "./_page";
 
 export default async function Home() {
   const destinations = await api.destination.search();
@@ -31,7 +31,10 @@ export default async function Home() {
       style={{ backgroundImage: `url(${backgroundImageUrl})` }}
     >
       {/* Overlay with opacity */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="absolute inset-0 z-0 bg-black bg-opacity-50" />
+
+      {/* Details */}
+      <DestinationDetails />
 
       {/* Destinations List */}
       <DestinationsList destinations={destinations} />
