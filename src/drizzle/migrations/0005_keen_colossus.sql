@@ -1,0 +1,1 @@
+ALTER TABLE "astro_destinations" DROP COLUMN IF EXISTS "planet_image";

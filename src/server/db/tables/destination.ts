@@ -11,6 +11,11 @@ import {
 
 import { createTable } from "../create-table";
 
+interface Planet {
+  name: string;
+  image: string;
+}
+
 export const destinations = createTable(
   "destinations",
   {
@@ -19,6 +24,7 @@ export const destinations = createTable(
     slug: varchar("slug", { length: 255 }).notNull().unique(),
     description: text("description").notNull(),
     location: varchar("location", { length: 255 }).notNull(),
+    planet: jsonb("planet").$type<Planet>().notNull(),
     coordinates: varchar("coordinates", { length: 100 }).notNull(),
     distanceFromEarth: varchar("distance_from_earth", {
       length: 255,
@@ -27,7 +33,6 @@ export const destinations = createTable(
     attractions: jsonb("attractions").notNull(),
     amenities: jsonb("amenities").notNull(),
     heroImage: text("hero_image"), // Cloudinary public ID
-    planetImage: text("planet_image"), // Cloudinary public ID
     imageUrls: jsonb("image_urls").notNull(),
     virtualTourUrl: varchar("virtual_tour_url", { length: 255 }),
     climate: varchar("climate", { length: 255 }),

@@ -29,6 +29,20 @@
       "when": 1714486659594,
       "tag": "0003_pink_salo",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1714488437592,
+      "tag": "0004_omniscient_la_nuit",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1714489173646,
+      "tag": "0005_keen_colossus",
+      "breakpoints": true
     }
   ]
 }
