@@ -9,22 +9,25 @@ interface Props {
   destination: DestinationSearch;
 }
 
-export function DestinationListingCard(props: Props) {
+export function DestinationListingCard({ destination }: Props) {
   return (
-    <Card isFooterBlurred radius="lg" className="border-none">
+    <Card
+      isFooterBlurred
+      radius="lg"
+      className="m-1 h-[250px] w-[250px] flex-shrink-0 border-none"
+    >
       <CldImage
         alt="Image of interstellar planet"
-        className="rounded-lg object-cover"
+        className="h-full w-full rounded-lg object-cover object-center"
         height={400}
         width={400}
-        src={props.destination.heroImage ?? ""}
+        src={destination.heroImage ?? ""}
       />
-      <CardFooter className="border-1 rounded-large shadow-small absolute bottom-1 z-10 ml-1 w-[calc(100%_-_8px)] justify-between overflow-hidden border-white/20 py-1 before:rounded-xl before:bg-white/10">
-        <p className="text-tiny text-white/80">Available soon.</p>
+      <CardFooter className="border-1 absolute bottom-1 left-1 right-1 z-10 flex items-center justify-between overflow-hidden rounded-lg bg-black/30 px-2 py-1 shadow-md">
+        <p className="text-xs text-white/80">Available soon.</p>
         <Button
-          className="text-tiny bg-black/20 text-white"
+          className="bg-black/50 text-xs text-white"
           variant="flat"
-          color="default"
           radius="lg"
           size="sm"
         >

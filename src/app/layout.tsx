@@ -25,13 +25,14 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        "w-full min-w-full bg-slate-950",
+        "flex min-h-screen w-full min-w-full flex-col bg-slate-950",
         "dark", // dark mode
       )}
     >
       <body
         className={cn(
-          "h-full w-full bg-slate-950 font-sans antialiased",
+          "bg-slate-950 font-sans antialiased",
+          "flex min-h-screen w-full min-w-full flex-col",
           inter.variable,
         )}
       >
