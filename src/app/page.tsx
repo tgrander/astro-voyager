@@ -1,13 +1,25 @@
+import { getCldImageUrl } from "next-cloudinary";
+
 import { api } from "@/trpc/server";
 import { cn } from "@/utils";
 
 import { DestinationListingCard } from "./_page";
 
-const backgroundImageUrl =
-  "https://res.cloudinary.com/dfjcoifwd/image/upload/v1714469708/skywalker/destinations/resort-on-mars/ubysijowsnwv4lsbpyiy.png";
-
 export default async function Home() {
   const destinations = await api.destination.search();
+
+  if (!destinations) {
+    return null;
+  }
+
+  const cloudinaryPublicId = destinations[0]?.heroImage ?? "";
+
+  const backgroundImageUrl = getCldImageUrl({
+    src: cloudinaryPublicId,
+    fillBackground: true,
+    crop: "fill",
+    quality: 100,
+  });
 
   return (
     <div

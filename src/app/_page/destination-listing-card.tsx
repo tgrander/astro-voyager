@@ -11,6 +11,8 @@ interface Props {
 }
 
 export function DestinationListingCard({ destination }: Props) {
+  const { selectedDestination } = useBrowseDestinationsStore();
+
   return (
     <Card
       isFooterBlurred
