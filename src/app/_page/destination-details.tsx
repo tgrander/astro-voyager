@@ -22,7 +22,7 @@ export function DestinationDetails() {
       </h1>
 
       {/* Planet */}
-      <div>
+      <div className="flex max-w-fit flex-col items-center justify-center">
         <CldImage
           alt="Image of planet"
           className="rounded-lg object-cover"
@@ -30,7 +30,9 @@ export function DestinationDetails() {
           width={200}
           src={selectedDestination?.planet.image ?? ""}
         />
-        <h2 className="font-rift"></h2>
+        <h2 className="font-rift text-4xl font-semibold">
+          {selectedDestination?.planet.name}
+        </h2>
       </div>
     </section>
   );
