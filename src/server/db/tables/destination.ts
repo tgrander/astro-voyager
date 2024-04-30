@@ -33,7 +33,7 @@ export const destinations = createTable(
     attractions: jsonb("attractions").notNull(),
     amenities: jsonb("amenities").notNull(),
     heroImage: text("hero_image"), // Cloudinary public ID
-    imageUrls: jsonb("image_urls").notNull(),
+    imageUrls: jsonb("image_urls").$type<string[]>().notNull(),
     virtualTourUrl: varchar("virtual_tour_url", { length: 255 }),
     climate: varchar("climate", { length: 255 }),
     gravity: varchar("gravity", { length: 255 }).notNull(),

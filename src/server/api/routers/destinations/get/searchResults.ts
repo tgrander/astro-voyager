@@ -43,5 +43,10 @@ export const search = publicProcedure
       ),
     ];
 
-    return modifiedResults;
+    return modifiedResults.map((dest) => {
+      return {
+        ...dest,
+        imageUrls: dest.imageUrls.filter((url) => url !== dest.heroImage),
+      };
+    });
   });

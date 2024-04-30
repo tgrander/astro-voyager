@@ -17,7 +17,12 @@ export const quantumQuasarArcade: NewDestination = {
   ],
   amenities: ["Cafes", "Lounges", "Tech demo areas"],
   heroImage: "skywalker/destinations/quantum-arcade/vvmmtigp3v74s07sybv6",
-  imageUrls: [],
+  imageUrls: [
+    "skywalker/destinations/quantum-arcade/xnfa81muik2c0qbfruoo",
+    "skywalker/destinations/quantum-arcade/xjbprwvsj9jwinpolotm",
+    "skywalker/destinations/quantum-arcade/hgpri2m5sbmx9ndk5ypw",
+    "skywalker/destinations/quantum-arcade/vvmmtigp3v74s07sybv6",
+  ],
   climate: "Controlled space station environment",
   gravity: "Adjustable gravity fields",
   safetyRating: "A+",
