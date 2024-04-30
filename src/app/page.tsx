@@ -12,15 +12,6 @@ export default async function Home() {
     return null;
   }
 
-  const cloudinaryPublicId = destinations[0]?.heroImage ?? "";
-
-  const backgroundImageUrl = getCldImageUrl({
-    src: cloudinaryPublicId,
-    fillBackground: true,
-    crop: "fill",
-    quality: 100,
-  });
-
   return (
     <div
       className={cn(
@@ -29,7 +20,6 @@ export default async function Home() {
         "flex min-h-screen w-full min-w-full flex-col",
         "bg-cover bg-center bg-no-repeat",
       )}
-      style={{ backgroundImage: `url(${backgroundImageUrl})` }}
     >
       <DestinationsList destinations={destinations} />
     </div>
