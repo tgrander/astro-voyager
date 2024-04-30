@@ -15,6 +15,7 @@ export const nebulaVineyard: NewDestination = {
     "Gourmet dining under the stars",
   ],
   amenities: ["Luxury lodging", "Event spaces", "Observation decks"],
+  heroImage: "skywalker/destinations/rkmtm1rqlzdt17dhcqdo",
   imageUrls: [],
   climate: "Controlled artificial environment",
   gravity: "Micro-gravity",

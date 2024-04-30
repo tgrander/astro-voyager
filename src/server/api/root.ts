@@ -1,3 +1,4 @@
+import { destinationsRouter } from "@/server/api/routers/destinations";
 import { spacecraftsRouter } from "@/server/api/routers/spacecrafts";
 import { createCallerFactory, createTRPCRouter } from "@/server/api/trpc";
 
@@ -8,6 +9,7 @@ import { createCallerFactory, createTRPCRouter } from "@/server/api/trpc";
  */
 export const appRouter = createTRPCRouter({
   spacecraft: spacecraftsRouter,
+  destination: destinationsRouter,
 });
 
 // export type definition of API

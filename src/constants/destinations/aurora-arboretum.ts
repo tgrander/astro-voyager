@@ -15,6 +15,7 @@ export const auroraArboretum: NewDestination = {
     "Exhibition of rare, off-world flora",
   ],
   amenities: ["Meditation pods", "Photo studio", "Educational center"],
+  heroImage: "skywalker/destinations/leixmoythzbilyh6l4dk",
   imageUrls: [],
   climate: "Controlled environment",
   gravity: "Zero gravity",

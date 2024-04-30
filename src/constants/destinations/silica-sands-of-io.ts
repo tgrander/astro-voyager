@@ -15,6 +15,7 @@ export const silicaSandsOfIo: NewDestination = {
     "Volcanic spa treatments",
   ],
   amenities: ["Electro-sandboard rentals", "Volcanic spas", "Local bazaars"],
+  heroImage: "skywalker/destinations/silica-sands/bjyzyzxexxtcgembbk1m",
   imageUrls: [],
   climate: "Extreme volcanic",
   gravity: "Reduced Gravity Fields",

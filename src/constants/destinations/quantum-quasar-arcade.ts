@@ -16,6 +16,7 @@ export const quantumQuasarArcade: NewDestination = {
     "Zero-gravity gaming arenas",
   ],
   amenities: ["Cafes", "Lounges", "Tech demo areas"],
+  heroImage: "skywalker/destinations/quantum-arcade/vvmmtigp3v74s07sybv6",
   imageUrls: [],
   climate: "Controlled space station environment",
   gravity: "Adjustable gravity fields",

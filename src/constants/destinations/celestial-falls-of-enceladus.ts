@@ -19,6 +19,7 @@ export const celestialFallsOfEnceladus: NewDestination = {
     "Surf equipment rental",
     "Bioluminescent fish stocked lakes",
   ],
+  heroImage: "skywalker/destinations/exjdxv9m8bi7jwwegkye",
   imageUrls: [],
   climate: "Sub-zero, icy",
   gravity: "Near-weightless Conditions",

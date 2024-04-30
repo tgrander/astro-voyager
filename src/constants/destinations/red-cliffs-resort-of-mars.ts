@@ -16,6 +16,7 @@ export const redCliffsResortOfMars: NewDestination = {
     "Gourmet restaurants",
     "Private balconies with views",
   ],
+  heroImage: "skywalker/destinations/resort-on-mars/ubysijowsnwv4lsbpyiy",
   imageUrls: [],
   climate: "Controlled indoor climate; harsh outside",
   gravity: "Low Martian Gravity",

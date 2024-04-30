@@ -11,6 +11,7 @@ export const luminousLagoonOfVenus: NewDestination = {
   travelTime: "4 months",
   attractions: ["Bioluminescent light shows", "Sky sailing", "Cloud fishing"],
   amenities: ["Luxury accommodations", "Observation decks", "Scientific labs"],
+  heroImage: "skywalker/destinations/floating lagoons/feiuzyorifay1gysgt6i",
   imageUrls: [],
   climate: "Controlled ambient within cloud cities",
   gravity: "Microgravity environments",

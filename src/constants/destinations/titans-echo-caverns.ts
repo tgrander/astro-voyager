@@ -19,6 +19,7 @@ export const titansEchoCaverns: NewDestination = {
     "Meditation retreat centers",
     "Guided wildlife tours",
   ],
+  heroImage: "skywalker/destinations/titans-caverns/hbf0jkdapghq0xewx9lj",
   imageUrls: [],
   climate: "Subterranean liquid methane",
   gravity: "Variable Gravity Caves",
