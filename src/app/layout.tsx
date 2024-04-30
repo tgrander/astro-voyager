@@ -5,6 +5,8 @@ import { Inter } from "next/font/google";
 import { Providers } from "@/app/providers";
 import { cn } from "@/utils";
 
+import { SidebarLayout } from "./_layout/sidebar-layout";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -36,7 +38,9 @@ export default function RootLayout({
           inter.variable,
         )}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <SidebarLayout>{children}</SidebarLayout>
+        </Providers>
       </body>
     </html>
   );
