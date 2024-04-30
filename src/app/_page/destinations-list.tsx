@@ -27,9 +27,9 @@ export function DestinationsList(props: Props) {
   return (
     <section
       className={cn(
-        "flex w-full items-center justify-start gap-6 overflow-x-scroll",
+        "grid grid-cols-1 gap-4",
+        " @md:grid-cols-2 @4xl:grid-cols-3",
         "p-4",
-        "absolute inset-x-0 bottom-0",
       )}
     >
       {props.destinations.map((destination) => (
