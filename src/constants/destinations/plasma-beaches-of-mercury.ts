@@ -7,7 +7,7 @@ export const plasmaBeachesOfMercury: NewDestination = {
     "Thermal beaches heated by Mercury’s intense surface temperatures, offering warm, relaxing sands year-round.",
   location: "Near Mercury’s poles",
   coordinates: "85°N, 60°E",
-  distanceFromEarth: "77 million kilometers at its closest approach",
+  distanceFromEarth: "91 million km away",
   travelTime: "3 months",
   attractions: [
     "Sunbathing under solar shields",

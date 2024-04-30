@@ -7,8 +7,7 @@ export const quantumQuasarArcade: NewDestination = {
     "A state-of-the-art entertainment complex with games powered by quantum computing, offering experiences bound only by the imagination.",
   location: "In orbit around a dormant quasar",
   coordinates: "Right Ascension: 13h 37m, Declination: -29° 51'",
-  distanceFromEarth:
-    "Located near a dormant quasar, roughly 5,000 light-years away",
+  distanceFromEarth: "5,000 light-years away",
   travelTime: "6 months",
   attractions: [
     "Quantum virtual reality",
