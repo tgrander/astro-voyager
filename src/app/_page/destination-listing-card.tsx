@@ -2,6 +2,7 @@
 
 import type { DestinationSearch } from "@/api/types";
 import { CldImage } from "@/common/image";
+import { useBrowseDestinationsStore } from "@/state/destinations";
 import { Button } from "@nextui-org/button";
 import { Card, CardFooter } from "@nextui-org/card";
 
