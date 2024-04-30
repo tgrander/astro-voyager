@@ -16,7 +16,7 @@ export function DestinationDetails() {
         "z-10",
       )}
     >
-      <h1 className={cn("font-rift text-7xl text-white")}>
+      <h1 className={cn("font-rift text-8xl font-bold text-white")}>
         {selectedDestination?.name}
       </h1>
     </section>
