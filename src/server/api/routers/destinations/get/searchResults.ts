@@ -26,5 +26,22 @@ export const search = publicProcedure
   .query(async ({ ctx }) => {
     const results = await ctx.db.query.destinations.findMany();
 
-    return results;
+    const targetDestinationSlug = "quantum-quasar-arcade";
+
+    const targetDestination = results.find(
+      (destination) => destination.slug === targetDestinationSlug,
+    );
+
+    if (!targetDestination) {
+      throw new Error("Target Destination not found");
+    }
+
+    const modifiedResults = [
+      targetDestination,
+      ...results.filter(
+        (destination) => destination.slug !== targetDestinationSlug,
+      ),
+    ];
+
+    return modifiedResults;
   });
