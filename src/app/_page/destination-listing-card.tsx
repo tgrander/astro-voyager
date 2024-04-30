@@ -14,29 +14,26 @@ export function DestinationListingCard({ destination }: Props) {
   const { selectedDestination } = useBrowseDestinationsStore();
 
   return (
-    <Card
-      isFooterBlurred
-      radius="lg"
-      className="m-1 h-[250px] w-[250px] flex-shrink-0 border-none"
-    >
-      <CldImage
-        alt="Image of interstellar planet"
-        className="h-full w-full rounded-lg object-cover object-center"
-        height={400}
-        width={400}
-        src={destination.heroImage ?? ""}
-      />
-      <CardFooter className="border-1 absolute bottom-1 left-1 right-1 z-10 flex items-center justify-between overflow-hidden rounded-lg bg-black/30 px-2 py-1 shadow-md">
-        <p className="text-xs text-white/80">Available soon.</p>
-        <Button
-          className="bg-black/50 text-xs text-white"
-          variant="flat"
-          radius="lg"
-          size="sm"
-        >
-          Notify me
-        </Button>
-      </CardFooter>
-    </Card>
+    <div className="flex flex-col justify-start gap-1">
+      <Card
+        isFooterBlurred={true}
+        radius="lg"
+        className="m-1 h-[250px] w-[250px] flex-shrink-0 border-none"
+      >
+        <CldImage
+          alt="Image of interstellar planet"
+          className="h-full w-full rounded-lg object-cover object-center"
+          height={400}
+          width={400}
+          src={destination.heroImage ?? ""}
+        />
+      </Card>
+
+      {/* Destination Info */}
+      <div className="flex flex-col gap-2">
+        <h2 className=" text-small font-medium">{`${destination.name}, ${destination.planet.name}`}</h2>
+        {/* <p classsName="text-sm">{destination.description}</p> */}
+      </div>
+    </div>
   );
 }
