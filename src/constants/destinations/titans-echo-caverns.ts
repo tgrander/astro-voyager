@@ -21,7 +21,6 @@ export const titansEchoCaverns: NewDestination = {
   ],
   heroImage: "skywalker/destinations/titans-caverns/hbf0jkdapghq0xewx9lj",
   imageUrls: [],
-  planetImage: "skywalker/planets/ofwlgtac1sanltemy0db",
   climate: "Subterranean liquid methane",
   gravity: "Variable Gravity Caves",
   safetyRating: "A",
@@ -41,4 +40,8 @@ export const titansEchoCaverns: NewDestination = {
     "Discovery by Calista Zheng in 2094",
     "Designation as a protected site in 2101",
   ],
+  planet: {
+    name: "Saturn",
+    image: "skywalker/planets/ofwlgtac1sanltemy0db",
+  },
 };

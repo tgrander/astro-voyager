@@ -13,7 +13,10 @@ export const luminousLagoonOfVenus: NewDestination = {
   amenities: ["Luxury accommodations", "Observation decks", "Scientific labs"],
   heroImage: "skywalker/destinations/floating lagoons/feiuzyorifay1gysgt6i",
   imageUrls: [],
-  planetImage: "skywalker/planets/ugyvue8v07gbrtodvsvq",
+  planet: {
+    name: "Venus",
+    image: "skywalker/planets/ugyvue8v07gbrtodvsvq",
+  },
   climate: "Controlled ambient within cloud cities",
   gravity: "Microgravity environments",
   safetyRating: "A+",

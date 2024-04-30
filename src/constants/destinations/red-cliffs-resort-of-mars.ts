@@ -18,7 +18,6 @@ export const redCliffsResortOfMars: NewDestination = {
   ],
   heroImage: "skywalker/destinations/resort-on-mars/ubysijowsnwv4lsbpyiy",
   imageUrls: [],
-  planetImage: "skywalker/planets/bazxdxubljac3u6oibrn",
   climate: "Controlled indoor climate; harsh outside",
   gravity: "Low Martian Gravity",
   safetyRating: "A",
@@ -38,4 +37,8 @@ export const redCliffsResortOfMars: NewDestination = {
     "Founded as a miner's refuge in 2085",
     "Transformed into a resort in 2130",
   ],
+  planet: {
+    name: "Mars",
+    image: "skywalker/planets/bazxdxubljac3u6oibrn",
+  },
 };

@@ -16,7 +16,6 @@ export const nebulaVineyard: NewDestination = {
   ],
   amenities: ["Luxury lodging", "Event spaces", "Observation decks"],
   heroImage: "skywalker/destinations/rkmtm1rqlzdt17dhcqdo",
-  planetImage: "skywalker/planets/kxmsqguenmhsduy9kd4w",
   imageUrls: [],
   climate: "Controlled artificial environment",
   gravity: "Micro-gravity",
@@ -36,4 +35,8 @@ export const nebulaVineyard: NewDestination = {
   researchFacilities: "Viticultural Research Station",
   culturalSignificance: "Pioneer in cosmic viticulture",
   historicalEvents: ["Foundation in 2120", "First vintage released in 2125"],
+  planet: {
+    name: "Orion Nebula",
+    image: "skywalker/planets/kxmsqguenmhsduy9kd4w",
+  },
 };

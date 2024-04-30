@@ -16,7 +16,10 @@ export const auroraArboretum: NewDestination = {
   ],
   amenities: ["Meditation pods", "Photo studio", "Educational center"],
   heroImage: "skywalker/destinations/leixmoythzbilyh6l4dk",
-  planetImage: "skywalker/planets/c5seuo0awpmwudl0kdp9",
+  planet: {
+    name: "Earth",
+    image: "skywalker/planets/c5seuo0awpmwudl0kdp9",
+  },
   imageUrls: [],
   climate: "Controlled environment",
   gravity: "Zero gravity",

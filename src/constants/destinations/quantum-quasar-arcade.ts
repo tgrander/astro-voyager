@@ -18,7 +18,6 @@ export const quantumQuasarArcade: NewDestination = {
   amenities: ["Cafes", "Lounges", "Tech demo areas"],
   heroImage: "skywalker/destinations/quantum-arcade/vvmmtigp3v74s07sybv6",
   imageUrls: [],
-  planetImage: "skywalker/planets/lxh9kgud4htsdkv8veps",
   climate: "Controlled space station environment",
   gravity: "Adjustable gravity fields",
   safetyRating: "A+",
@@ -37,4 +36,8 @@ export const quantumQuasarArcade: NewDestination = {
     "Launched in 2145 by tech mogul Elon Tusk",
     "First to integrate quantum AI in public gaming",
   ],
+  planet: {
+    name: "Dormant Quasar",
+    image: "skywalker/planets/lxh9kgud4htsdkv8veps",
+  },
 };

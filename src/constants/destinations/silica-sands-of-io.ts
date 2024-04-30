@@ -6,6 +6,10 @@ export const silicaSandsOfIo: NewDestination = {
   description:
     "Famous for its vast electric-blue silica sand dunes, created by intense volcanic activity and electric storms.",
   location: "Io, Jupiter's Moon",
+  planet: {
+    name: "Jupiter",
+    image: "skywalker/planets/qc6m1xiecp7xeunagvsx",
+  },
   coordinates: "18°N, 55°W",
   distanceFromEarth: "628 million kilometers away",
   travelTime: "1.5 years",
@@ -17,7 +21,6 @@ export const silicaSandsOfIo: NewDestination = {
   amenities: ["Electro-sandboard rentals", "Volcanic spas", "Local bazaars"],
   heroImage: "skywalker/destinations/silica-sands/bjyzyzxexxtcgembbk1m",
   imageUrls: [],
-  planetImage: "skywalker/planets/qc6m1xiecp7xeunagvsx",
   climate: "Extreme volcanic",
   gravity: "Reduced Gravity Fields",
   safetyRating: "B",
