@@ -21,6 +21,7 @@ export const titansEchoCaverns: NewDestination = {
   ],
   heroImage: "skywalker/destinations/titans-caverns/hbf0jkdapghq0xewx9lj",
   imageUrls: [],
+  planetImage: "skywalker/planets/ofwlgtac1sanltemy0db",
   climate: "Subterranean liquid methane",
   gravity: "Variable Gravity Caves",
   safetyRating: "A",

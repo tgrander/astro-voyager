@@ -18,6 +18,7 @@ export const redCliffsResortOfMars: NewDestination = {
   ],
   heroImage: "skywalker/destinations/resort-on-mars/ubysijowsnwv4lsbpyiy",
   imageUrls: [],
+  planetImage: "skywalker/planets/bazxdxubljac3u6oibrn",
   climate: "Controlled indoor climate; harsh outside",
   gravity: "Low Martian Gravity",
   safetyRating: "A",

@@ -20,6 +20,7 @@ export const celestialFallsOfEnceladus: NewDestination = {
     "Bioluminescent fish stocked lakes",
   ],
   heroImage: "skywalker/destinations/exjdxv9m8bi7jwwegkye",
+  planetImage: "skywalker/planets/ofwlgtac1sanltemy0db",
   imageUrls: [],
   climate: "Sub-zero, icy",
   gravity: "Near-weightless Conditions",

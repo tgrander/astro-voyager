@@ -17,6 +17,7 @@ export const plasmaBeachesOfMercury: NewDestination = {
   amenities: ["Solar lounges", "Heat-resistant cabanas", "Artistic studios"],
   heroImage: "skywalker/destinations/mercury-beaches/lgeazck21fedabjnkswn",
   imageUrls: [],
+  planetImage: "skywalker/planets/bi5bukoq1irqv4kwc4ds",
   climate: "Controlled thermal environments",
   gravity: "Enhanced Gravity Wells",
   safetyRating: "A",

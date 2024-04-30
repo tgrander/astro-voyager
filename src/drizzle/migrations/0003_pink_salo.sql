@@ -1,0 +1,1 @@
+ALTER TABLE "astro_destinations" ADD COLUMN "planet_image" text;

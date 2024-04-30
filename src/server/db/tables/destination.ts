@@ -27,6 +27,7 @@ export const destinations = createTable(
     attractions: jsonb("attractions").notNull(),
     amenities: jsonb("amenities").notNull(),
     heroImage: text("hero_image"), // Cloudinary public ID
+    planetImage: text("planet_image"), // Cloudinary public ID
     imageUrls: jsonb("image_urls").notNull(),
     virtualTourUrl: varchar("virtual_tour_url", { length: 255 }),
     climate: varchar("climate", { length: 255 }),

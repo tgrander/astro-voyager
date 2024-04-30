@@ -20,6 +20,7 @@ export const novaPolarisStation: NewDestination = {
     "Daily space tours",
   ],
   heroImage: "skywalker/destinations/nova polaris/otfgm8uqmgkgoggouiyx",
+  planetImage: "skywalker/planets/oqlfjlw3dyqhx55jr1xw",
   imageUrls: [],
   climate: "Controlled space environment",
   gravity: "Artificial Gravity Hubs",
