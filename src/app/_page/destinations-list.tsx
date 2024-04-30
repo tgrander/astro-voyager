@@ -27,8 +27,8 @@ export function DestinationsList(props: Props) {
   return (
     <section
       className={cn(
-        "grid grid-cols-1 gap-4",
-        " @md:grid-cols-2 @4xl:grid-cols-3",
+        "grid grid-cols-1 gap-4", // layout
+        "@md:grid-cols-2 @4xl:grid-cols-3", // responsive layout
         "p-4",
       )}
     >

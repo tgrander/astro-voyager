@@ -21,6 +21,7 @@
     "@nextui-org/divider": "^2.0.27",
     "@nextui-org/system": "^2.1.2",
     "@nextui-org/theme": "^2.2.3",
+    "@radix-ui/react-navigation-menu": "^1.1.4",
     "@t3-oss/env-nextjs": "^0.10.1",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/forms": "^0.5.7",
