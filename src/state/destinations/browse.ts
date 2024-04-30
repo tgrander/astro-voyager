@@ -1,8 +1,10 @@
 import { create } from "zustand";
 
+import type { DestinationSearch } from "@/api/types";
+
 interface BrowseDestinationsStore {
-  selectedDestination: string | null; // Destination slug
-  setSelectedDestination: (slug: string) => void;
+  selectedDestination: DestinationSearch | null; // Destination slug
+  setSelectedDestination: (destination: DestinationSearch) => void;
 }
 
 export const useBrowseDestinationsStore = create<BrowseDestinationsStore>(

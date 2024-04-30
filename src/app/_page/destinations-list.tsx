@@ -1,13 +1,29 @@
+"use client";
+
+import React from "react";
+
+import { useBrowseDestinationsStore } from "@/state/destinations";
 import { cn } from "@/utils";
 
 import { DestinationListingCard } from "./destination-listing-card";
 
 import type { DestinationsSearch } from "@/api/types";
+
 interface Props {
   destinations: DestinationsSearch;
 }
 
 export function DestinationsList(props: Props) {
+  const { destinations } = props;
+
+  const { setSelectedDestination } = useBrowseDestinationsStore();
+
+  React.useEffect(() => {
+    const firstDestination = destinations[0]!;
+
+    setSelectedDestination(firstDestination);
+  }, [destinations, setSelectedDestination]);
+
   return (
     <section
       className={cn(
