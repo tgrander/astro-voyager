@@ -3,7 +3,7 @@ import { getCldImageUrl } from "next-cloudinary";
 import { api } from "@/trpc/server";
 import { cn } from "@/utils";
 
-import { DestinationListingCard } from "./_page";
+import { DestinationsList } from "./_page";
 
 export default async function Home() {
   const destinations = await api.destination.search();
@@ -33,21 +33,8 @@ export default async function Home() {
       {/* Overlay with opacity */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      {/* Destinations horizontal card list */}
-      <section
-        className={cn(
-          "flex w-full items-center justify-start gap-6 overflow-x-scroll",
-          "p-4",
-          "absolute inset-x-0 bottom-0",
-        )}
-      >
-        {destinations.map((destination) => (
-          <DestinationListingCard
-            key={destination.id}
-            destination={destination}
-          />
-        ))}
-      </section>
+      {/* Destinations List */}
+      <DestinationsList destinations={destinations} />
     </div>
   );
 }
