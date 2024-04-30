@@ -12,7 +12,7 @@ export type SpacecraftSearch = SpacecraftsSearch extends (infer U)[]
 ////////////////////////////////////////
 // Destinations
 ////////////////////////////////////////
-type DestinationsSearchArrayPromise = ReturnType<typeof api.spacecraft.search>;
+type DestinationsSearchArrayPromise = ReturnType<typeof api.destination.search>;
 export type DestinationsSearch = Awaited<DestinationsSearchArrayPromise>;
 export type DestinationSearch = DestinationsSearch extends (infer U)[]
   ? U
