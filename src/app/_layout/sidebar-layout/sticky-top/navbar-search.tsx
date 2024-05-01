@@ -2,27 +2,39 @@
 
 import React, { useState } from "react";
 
+import { PlanetsSearch } from "@/api/types";
 import {
   HoveredLink,
   Menu,
   MenuItem,
   ProductItem,
 } from "@/components/ui/aceternity/navbar-menu";
+import { api } from "@/trpc/react";
 import { cn } from "@/utils/cn";
 
 export function NavbarSearch() {
+  const planetsQuery = api.planet.search.useQuery();
+
+  const planets = planetsQuery.data ?? [];
+
+  console.log("planets", planets);
+
   return (
     <div className="relative flex w-full items-center justify-center">
-      <Navbar className="top-2" />
-      <p className="text-black dark:text-white">
-        The Navbar will show on top of the page
-      </p>
+      <Navbar className="top-2" planets={planets} />
     </div>
   );
 }
 
-function Navbar({ className }: { className?: string }) {
+function Navbar({
+  className,
+  planets,
+}: {
+  className?: string;
+  planets: PlanetsSearch;
+}) {
   const [active, setActive] = useState<string | null>(null);
+
   return (
     <div
       className={cn("fixed inset-x-0 top-10 z-50 mx-auto max-w-2xl", className)}

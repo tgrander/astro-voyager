@@ -17,3 +17,10 @@ export type DestinationsSearch = Awaited<DestinationsSearchArrayPromise>;
 export type DestinationSearch = DestinationsSearch extends (infer U)[]
   ? U
   : never;
+
+////////////////////////////////////////
+// Destinations
+////////////////////////////////////////
+type PlanetsSearchArrayPromise = ReturnType<typeof api.planet.search>;
+export type PlanetsSearch = Awaited<PlanetsSearchArrayPromise>;
+export type PlanetSearch = PlanetsSearch extends (infer U)[] ? U : never;
