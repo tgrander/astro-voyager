@@ -56,6 +56,7 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+<<<<<<< HEAD
         // Custom colors
         periwinkle: palette.periwinkle,
         indigo: palette.indigo,
@@ -63,6 +64,8 @@ const config = {
         sapphire: palette.sapphire,
         plum: palette.plum,
         radiant: palette.radiant,
+=======
+>>>>>>> parent of 31f3ebd (tailwind config: color palette)
       },
       borderRadius: {
         lg: "var(--radius)",
