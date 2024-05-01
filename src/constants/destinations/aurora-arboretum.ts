@@ -24,6 +24,7 @@ export const auroraArboretum: NewDestination = {
   climate: "Controlled environment",
   gravity: "Zero gravity",
   safetyRating: "A+",
+  visitorRating: "4.8",
   visitorReviews: [
     "Floating among the flowers with the aurora overhead was magical!",
     "The best place to unwind and learn.",

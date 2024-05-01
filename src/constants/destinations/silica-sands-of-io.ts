@@ -24,6 +24,7 @@ export const silicaSandsOfIo: NewDestination = {
   climate: "Extreme volcanic",
   gravity: "Reduced Gravity Fields",
   safetyRating: "B",
+  visitorRating: "4.5",
   visitorReviews: [
     "The electric storms are like nothing else in the solar system!",
     "A thrilling and rejuvenating experience!",

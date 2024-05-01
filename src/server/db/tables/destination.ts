@@ -39,6 +39,7 @@ export const destinations = createTable(
     gravity: varchar("gravity", { length: 255 }).notNull(),
     safetyRating: varchar("safety_rating", { length: 50 }),
     visitorReviews: jsonb("visitor_reviews"),
+    visitorRating: text("visitor_ratings"),
     averageCostPerDay: integer("average_cost_per_day").notNull(),
     bookingStatus: varchar("booking_status", { length: 50 }).notNull(),
     popularActivities: jsonb("popular_activities"),

@@ -20,6 +20,7 @@ export const nebulaVineyard: NewDestination = {
   climate: "Controlled artificial environment",
   gravity: "Micro-gravity",
   safetyRating: "AAA",
+  visitorRating: "4.8",
   visitorReviews: [
     "The wine tasting was out of this world!",
     "Never imagined harvest festivals could be so magical.",

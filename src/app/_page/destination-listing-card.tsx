@@ -3,6 +3,7 @@
 import type { DestinationSearch } from "@/api/types";
 import { CldImage } from "@/common/image";
 import { useBrowseDestinationsStore } from "@/state/destinations";
+import { StarIcon } from "@heroicons/react/20/solid";
 import { Button } from "@nextui-org/button";
 import { Card, CardFooter } from "@nextui-org/card";
 
@@ -30,9 +31,22 @@ export function DestinationListingCard({ destination }: Props) {
       </Card>
 
       {/* Destination Info */}
-      <div className="flex flex-col gap-2">
-        <h2 className=" text-small font-medium">{`${destination.name}, ${destination.planet.name}`}</h2>
-        {/* <p classsName="text-sm">{destination.description}</p> */}
+      <div className="flex w-[250px] items-start justify-between gap-4">
+        {/* Text info */}
+        <div className="flex flex-col gap-1">
+          <h2 className=" text-small font-medium">{`${destination.name}, ${destination.planet.name}`}</h2>
+          <p className="text-sm text-gray-300">
+            {destination.distanceFromEarth}
+          </p>
+        </div>
+
+        {/* Rating */}
+        <div className="flex shrink-0 items-center gap-1">
+          <StarIcon className="h-4 w-4 text-yellow-400" />
+          <span className="text-sm text-gray-300">
+            {destination.visitorRating}
+          </span>
+        </div>
       </div>
     </div>
   );

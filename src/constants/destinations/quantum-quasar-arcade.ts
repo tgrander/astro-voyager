@@ -25,6 +25,7 @@ export const quantumQuasarArcade: NewDestination = {
   climate: "Controlled space station environment",
   gravity: "Adjustable gravity fields",
   safetyRating: "A+",
+  visitorRating: "4.9",
   visitorReviews: [
     "Mind-bending experiences!",
     "The future of gaming is here.",

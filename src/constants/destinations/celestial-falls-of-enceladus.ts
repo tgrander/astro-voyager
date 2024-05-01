@@ -28,6 +28,7 @@ export const celestialFallsOfEnceladus: NewDestination = {
   climate: "Sub-zero, icy",
   gravity: "Near-weightless Conditions",
   safetyRating: "A",
+  visitorRating: "4.9",
   visitorReviews: [
     "Geyser surfing was like nothing I've ever done!",
     "The bioluminescent fishing was absolutely magical.",

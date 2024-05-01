@@ -20,6 +20,7 @@ export const redCliffsResortOfMars: NewDestination = {
   climate: "Controlled indoor climate; harsh outside",
   gravity: "Low Martian Gravity",
   safetyRating: "A",
+  visitorRating: "4.7",
   visitorReviews: [
     "The view was literally out of this world!",
     "Skydiving into the canyon was exhilarating!",

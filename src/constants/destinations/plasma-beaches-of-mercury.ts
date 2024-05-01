@@ -20,6 +20,7 @@ export const plasmaBeachesOfMercury: NewDestination = {
   climate: "Controlled thermal environments",
   gravity: "Enhanced Gravity Wells",
   safetyRating: "A",
+  visitorRating: "4.3",
   visitorReviews: [
     "The closest you can get to the Sun without frying!",
     "Incredible magnetic sand art!",

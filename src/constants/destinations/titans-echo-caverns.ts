@@ -24,6 +24,7 @@ export const titansEchoCaverns: NewDestination = {
   climate: "Subterranean liquid methane",
   gravity: "Variable Gravity Caves",
   safetyRating: "A",
+  visitorRating: "4.6",
   visitorReviews: [
     "The submarine tour was like visiting another world!",
     "A profound experience during the sound retreat.",

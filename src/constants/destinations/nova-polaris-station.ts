@@ -24,6 +24,7 @@ export const novaPolarisStation: NewDestination = {
   climate: "Controlled space environment",
   gravity: "Artificial Gravity Hubs",
   safetyRating: "A+",
+  visitorRating: "4.7",
   visitorReviews: [
     "An unforgettable journey!",
     "The heart of the galaxy beats strongest here.",

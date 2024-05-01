@@ -20,6 +20,7 @@ export const luminousLagoonOfVenus: NewDestination = {
   climate: "Controlled ambient within cloud cities",
   gravity: "Microgravity environments",
   safetyRating: "A+",
+  visitorRating: "4.6",
   visitorReviews: [
     "A dreamlike experience!",
     "Feels like floating in a painting.",
