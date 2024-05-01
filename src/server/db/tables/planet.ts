@@ -28,6 +28,7 @@ export const planets = createTable(
   {
     id: uuid("id").primaryKey(),
     name: varchar("name", { length: 255 }).notNull(),
+    slug: varchar("slug", { length: 300 }).notNull(),
     description: text("description").notNull(),
     type: varchar("type", { length: 100 }).notNull(),
     location: varchar("location", { length: 255 }).notNull(),
