@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 
-import { PlanetsSearch } from "@/api/types";
 import {
   HoveredLink,
   Menu,
@@ -12,6 +11,9 @@ import {
 import { api } from "@/trpc/react";
 import { cn } from "@/utils/cn";
 
+import { PlanetCard } from "./navbar-search/planet-card";
+
+import type { PlanetsSearch } from "@/api/types";
 export function NavbarSearch() {
   const planetsQuery = api.planet.search.useQuery();
 
@@ -42,7 +44,10 @@ function Navbar({
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Destination">
           <div className="  grid grid-cols-2 gap-10 p-4 text-sm">
-            <ProductItem
+            {planets.map((planet) => (
+              <PlanetCard key={planet.id} planet={planet} />
+            ))}
+            {/* <ProductItem
               title="Algochurn"
               href="https://algochurn.com"
               src="https://res.cloudinary.com/dfjcoifwd/image/upload/v1714469357/skywalker/destinations/quantum-arcade/xnfa81muik2c0qbfruoo.png"
@@ -65,7 +70,7 @@ function Navbar({
               href="https://userogue.com"
               src="https://res.cloudinary.com/dfjcoifwd/image/upload/v1714469356/skywalker/destinations/quantum-arcade/vvmmtigp3v74s07sybv6.png"
               description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
-            />
+            /> */}
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Dates">
