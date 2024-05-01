@@ -1,0 +1,1 @@
+ALTER TABLE "astro_planets" ALTER COLUMN "discovery_date" SET DATA TYPE text;

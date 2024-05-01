@@ -2,13 +2,12 @@ import { sql } from "drizzle-orm";
 import {
   bigint,
   boolean,
-  date,
   decimal,
   index,
   jsonb,
+  serial,
   text,
   timestamp,
-  uuid,
   varchar,
 } from "drizzle-orm/pg-core";
 
@@ -33,7 +32,7 @@ interface AtmosphericComposition {
 export const planets = createTable(
   "planets",
   {
-    id: uuid("id").primaryKey(),
+    id: serial("id").primaryKey(),
     name: varchar("name", { length: 255 }).notNull(),
     slug: varchar("slug", { length: 300 }).notNull(),
     description: text("description").notNull(),
@@ -43,11 +42,11 @@ export const planets = createTable(
     orbitalPeriod: decimal("orbital_period", {
       precision: 10,
       scale: 2,
-    }).notNull(),
+    }),
     rotationPeriod: decimal("rotation_period", {
       precision: 10,
       scale: 2,
-    }).notNull(),
+    }),
     diameter: bigint("diameter", { mode: "number" }).notNull(),
     climate: varchar("climate", { length: 100 }).notNull(),
     gravity: decimal("gravity", { precision: 5, scale: 2 }),
@@ -55,7 +54,7 @@ export const planets = createTable(
     ringSystem: boolean("ring_system").notNull(),
     heroImage: text("hero_image"), // Cloudinary public ID
     imageUrls: jsonb("image_urls").$type<string[]>().notNull(),
-    discoveryDate: date("discovery_date").notNull(),
+    discoveryDate: text("discovery_date").notNull(),
     discoveredBy: varchar("discovered_by", { length: 255 }).notNull(),
     notableFeatures: text("notable_features").notNull(),
     habitability: varchar("habitability", { length: 100 }).notNull(),

@@ -5,7 +5,7 @@ export const planetData: NewPlanet[] = [
   {
     name: "Earth",
     heroImage: "skywalker/planets/c5seuo0awpmwudl0kdp9",
-    id: "earth-uuid",
+
     slug: "earth",
     description:
       "Our home planet, known for its vast oceans, diverse ecosystems, and rich history.",
@@ -45,7 +45,6 @@ export const planetData: NewPlanet[] = [
   },
   // SATURN
   {
-    id: "uuid-saturn-1",
     name: "Saturn",
     description:
       "Known for its extensive ring system, Saturn is a gas giant with a magnetic field stronger than Earth's. It is enveloped by over a hundred rings made of ice and rock.",
@@ -72,7 +71,7 @@ export const planetData: NewPlanet[] = [
     imageUrls: [
       "https://res.cloudinary.com/skywalker/planets/ofwlgtac1sanltemy0db",
     ],
-    discoveryDate: "1610-01-01",
+    discoveryDate: "1610",
     discoveredBy: "Galileo Galilei",
     notableFeatures: "Extensive and bright ring system visible from Earth.",
     habitability: "Non-habitable",
@@ -93,7 +92,7 @@ export const planetData: NewPlanet[] = [
   // VENUS
   {
     name: "Venus",
-    id: "planet-004",
+
     slug: "venus",
     description:
       "Often called Earth's 'sister planet' due to its similar size and proximity to the Sun, Venus is covered in a thick atmosphere that traps heat.",
@@ -119,7 +118,7 @@ export const planetData: NewPlanet[] = [
       "https://res.cloudinary.com/skywalker/planets/ugyvue8v07gbrtodvsvq",
     ],
     heroImage: "skywalker/planets/ugyvue8v07gbrtodvsvq",
-    discoveryDate: "prehistory",
+    discoveryDate: "Prehistoric",
     discoveredBy: "Ancient Observers",
     notableFeatures: "Known for its runaway greenhouse effect.",
     habitability: "Non-habitable",
@@ -127,15 +126,14 @@ export const planetData: NewPlanet[] = [
   },
   // ORION NEBULA
   {
-    id: "orion-nebula-001",
     name: "Orion Nebula",
     description:
       "A diffuse nebula situated in the Milky Way, being south of Orion's Belt in the constellation of Orion. It is one of the brightest nebulae, visible to the naked eye in the night sky.",
     type: "Diffuse Nebula",
     location: "Milky Way Galaxy, Orion Constellation",
     distanceFromSun: 1344000000000,
-    orbitalPeriod: "null",
-    rotationPeriod: "null",
+    orbitalPeriod: null,
+    rotationPeriod: null,
     diameter: 24000000,
     climate: "N/A",
     gravity: null,
@@ -154,7 +152,7 @@ export const planetData: NewPlanet[] = [
     imageUrls: [
       "https://res.cloudinary.com/skywalker/planets/kxmsqguenmhsduy9kd4w",
     ],
-    discoveryDate: "1610-01-01",
+    discoveryDate: "1610",
     discoveredBy: "Nicholas-Claude Fabri de Peiresc",
     notableFeatures:
       "Orion Nebula is an active stellar nursery where new stars are being born. It contains a young open cluster, known as the Trapezium due to the asterism of its primary stars.",
@@ -167,7 +165,7 @@ export const planetData: NewPlanet[] = [
   // POLARIS
   {
     name: "Polaris",
-    id: "polaris-uuid",
+
     slug: "polaris",
     description:
       "Known as the North Star, serves as an important fixed point for navigation and is located at the end of the Little Dipper's handle.",
@@ -201,7 +199,6 @@ export const planetData: NewPlanet[] = [
   },
   // MERCURY
   {
-    id: "mercury-uuid",
     name: "Mercury",
     slug: "mercury",
     description:
@@ -223,7 +220,7 @@ export const planetData: NewPlanet[] = [
       traceGases: null,
     },
     imageUrls: ["https://cdn.example.com/images/mercury.jpg"],
-    discoveryDate: "Prehistory",
+    discoveryDate: "Prehistoric",
     discoveredBy: "Unknown",
     notableFeatures: "Has a very thin atmosphere and no natural satellites.",
     habitability: "Not habitable",
@@ -232,7 +229,6 @@ export const planetData: NewPlanet[] = [
   },
   // MARS
   {
-    id: "mars-uuid",
     name: "Mars",
     slug: "mars",
     description:
@@ -264,7 +260,7 @@ export const planetData: NewPlanet[] = [
       traceGases: null,
     },
     imageUrls: ["https://cdn.example.com/images/mars.jpg"],
-    discoveryDate: "Prehistory",
+    discoveryDate: "Prehistoric",
     discoveredBy: "Unknown",
     notableFeatures:
       "Home to the largest volcano and the deepest, longest canyon in the solar system.",
@@ -274,7 +270,6 @@ export const planetData: NewPlanet[] = [
   },
   // JUPITER
   {
-    id: "jupiter-uuid",
     name: "Jupiter",
     slug: "jupiter",
     description:
@@ -317,7 +312,7 @@ export const planetData: NewPlanet[] = [
       waterVapor: 0,
     },
     imageUrls: ["https://cdn.example.com/images/jupiter.jpg"],
-    discoveryDate: "prehistory",
+    discoveryDate: "Prehistoric",
     discoveredBy: "unknown",
     notableFeatures:
       "Home to the largest planetary atmosphere, with persistent storms such as the Great Red Spot.",
@@ -328,7 +323,6 @@ export const planetData: NewPlanet[] = [
   },
   // SATURN
   {
-    id: "saturn-001",
     name: "Saturn",
     description:
       "The sixth planet from the Sun and the second-largest in our solar system, Saturn is famed for its stunning ring system, composed of ice particles, rocky debris, and dust.",
@@ -377,7 +371,7 @@ export const planetData: NewPlanet[] = [
     imageUrls: [
       "https://res.cloudinary.com/skywalker/planets/ofwlgtac1sanltemy0db",
     ],
-    discoveryDate: "1610-01-01",
+    discoveryDate: "1610",
     discoveredBy: "Galileo Galilei",
     notableFeatures:
       "Saturn's ring system is the most extensive and complex in the solar system, providing a spectacular feature visible even from Earth with small telescopes.",
@@ -389,18 +383,17 @@ export const planetData: NewPlanet[] = [
   },
   // DORMANT QUASAR / BLACK HOLE
   {
-    id: "dormant-quasar-001",
     name: "Dormant Quasar",
     description:
       "A formerly active quasar now in a dormant state, located at the edge of the observable universe. Once a bright beacon of immense energy, it now serves as a mysterious relic of the cosmos's dynamic past.",
     type: "Quasar",
     location: "Edge of the Observable Universe",
     distanceFromSun: 230000000000000000000000, // Distance in kilometers
-    orbitalPeriod: "null",
-    rotationPeriod: "null",
+    orbitalPeriod: null,
+    rotationPeriod: null,
     diameter: 0, // Quasars do not have a defined diameter in traditional sense
     climate: "N/A",
-    gravity: "null",
+    gravity: null,
     moons: [],
     ringSystem: false,
     atmosphere: {
@@ -414,7 +407,7 @@ export const planetData: NewPlanet[] = [
     imageUrls: [
       "https://res.cloudinary.com/skywalker/planets/lxh9kgud4htsdkv8veps",
     ],
-    discoveryDate: "1963-01-01",
+    discoveryDate: "1963",
     discoveredBy: "Astronomical observations",
     notableFeatures:
       "Once a powerful source of energy, it is now a fascinating subject for studying the life cycle of quasars and the early universe.",
