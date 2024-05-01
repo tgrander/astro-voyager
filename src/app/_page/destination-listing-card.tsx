@@ -4,8 +4,7 @@ import type { DestinationSearch } from "@/api/types";
 import { CldImage } from "@/common/image";
 import { useBrowseDestinationsStore } from "@/state/destinations";
 import { StarIcon } from "@heroicons/react/20/solid";
-import { Button } from "@nextui-org/button";
-import { Card, CardFooter } from "@nextui-org/card";
+import { Card } from "@nextui-org/card";
 
 interface Props {
   destination: DestinationSearch;
