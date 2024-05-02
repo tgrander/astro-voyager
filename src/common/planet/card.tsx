@@ -26,9 +26,9 @@ export function PlanetCard({ planet }: Props) {
         radius="lg"
         className={cn(
           "m-1 h-[50px] w-[50px] flex-shrink-0 border-none",
-          "cursor-pointer rounded-full",
+          "cursor-pointer rounded-full opacity-40",
           {
-            "neon-pink": isSelected,
+            "neon-pink opacity-100": isSelected,
           },
         )}
       >
