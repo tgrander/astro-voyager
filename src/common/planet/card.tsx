@@ -20,14 +20,20 @@ export function PlanetCard({ planet }: Props) {
   const isSelected = selectedPlanet?.id === planet.id;
   const isHovered = hoveredPlanet?.id === planet.id;
 
+  console.log("selectedPlanet", selectedPlanet);
+
   return (
-    <div>
+    <div onClick={() => setSelectedPlanet(planet)}>
       <Card
         isFooterBlurred={true}
         radius="lg"
-        className={cn("m-1 h-[75px] w-[75px] flex-shrink-0 border-none", {
-          "border-2 border-white": isSelected,
-        })}
+        className={cn(
+          "m-1 h-[75px] w-[75px] flex-shrink-0 border-none",
+          "cursor-pointer",
+          {
+            "border-2 border-white": isSelected,
+          },
+        )}
       >
         <CldImage
           src={planet.heroImage ?? ""}

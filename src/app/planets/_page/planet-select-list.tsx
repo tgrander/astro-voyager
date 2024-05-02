@@ -15,8 +15,6 @@ interface Props {
 export function PlanetsSelectList(props: Props) {
   const { selectedPlanet, setSelectedPlanet } = useSelectPlanetStore();
 
-  console.log("selectedPlanet", selectedPlanet);
-
   useEffect(() => {
     if (selectedPlanet === null) {
       setSelectedPlanet(props.planets[0]!);
