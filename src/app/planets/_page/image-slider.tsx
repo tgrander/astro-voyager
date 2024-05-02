@@ -4,7 +4,7 @@ import React from "react";
 
 import { cn } from "@/utils";
 
-import { useSelectDestinationStore } from "../_state/useSelectDestinationStore"; // Assume this store setup from previous instructions
+import { useSelectDestinationStore } from "../_state/useSelectDestinationStore";
 
 interface CardData {
   id: string;
@@ -44,17 +44,8 @@ export const ImageCardSlider: React.FC = () => {
   const { selectedCard, setSelectedCard } = useSelectDestinationStore();
 
   return (
-    <div
-      className={cn(
-        "fixed inset-x-0 bottom-0 flex h-fit items-center justify-start",
-      )}
-    >
-      <div
-        className={cn(
-          "flex h-[400px] overflow-hidden",
-          "max-w-screen-2xl px-4 pb-8 sm:px-6 lg:px-8",
-        )}
-      >
+    <div className="w-full">
+      <div className={cn("flex h-[400px] overflow-hidden")}>
         {cardData.map((card) => (
           <React.Fragment key={card.id}>
             <input

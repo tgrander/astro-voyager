@@ -4,7 +4,6 @@ import React from "react";
 
 import { useSelectPlanetStore } from "@/app/planets/_state/useSelectPlanetStore";
 import { CldImage } from "@/common/image";
-import { BackgroundGradient } from "@/components/ui/aceternity/background-gradient";
 import { cn } from "@/utils";
 import { Card, CardBody, CardFooter } from "@nextui-org/card";
 
@@ -19,8 +18,6 @@ export function PlanetCard({ planet }: Props) {
 
   const isSelected = selectedPlanet?.id === planet.id;
   const isHovered = hoveredPlanet?.id === planet.id;
-
-  console.log("selectedPlanet", selectedPlanet);
 
   return (
     <div onClick={() => setSelectedPlanet(planet)}>
