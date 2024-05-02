@@ -5,8 +5,6 @@ import { Inter } from "next/font/google";
 import { Providers } from "@/app/providers";
 import { cn } from "@/utils";
 
-import { SidebarLayout } from "./_layout/sidebar-layout";
-
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -40,7 +38,7 @@ export default function RootLayout({
       >
         <Providers>
           {/* <SidebarLayout>{children}</SidebarLayout> */}
-          {children}
+          <div className="flex min-h-screen flex-col">{children}</div>
         </Providers>
       </body>
     </html>

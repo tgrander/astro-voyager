@@ -1,3 +1,4 @@
+import { ContentLayout } from "@/common/layout/content-layout";
 import { PlanetCard } from "@/common/planet";
 import { api } from "@/trpc/server";
 
@@ -7,18 +8,17 @@ export default async function PlanetsPage() {
   const planets = await api.planet.search();
 
   return (
-    <div className="flex min-h-full flex-col">
-      <h1>Planets Page</h1>
-
-      <div className="flex items-center justify-start gap-10 pl-16">
-        {planets.map((planet) => (
-          <PlanetCard key={planet.id} planet={planet} />
-        ))}
-      </div>
-
-      <div className="flex flex-grow flex-col">
-        <ImageCardSlider />
-      </div>
+    <div className="relative flex min-h-screen flex-grow flex-col">
+      <ContentLayout className="h-full">
+        <div className="relative flex items-center justify-start gap-10">
+          {planets.map((planet) => (
+            <PlanetCard key={planet.id} planet={planet} />
+          ))}
+        </div>
+        <ContentLayout className="relative h-full">
+          <ImageCardSlider />
+        </ContentLayout>
+      </ContentLayout>
     </div>
   );
 }

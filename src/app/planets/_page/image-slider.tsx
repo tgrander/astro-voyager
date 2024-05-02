@@ -44,8 +44,17 @@ export const ImageCardSlider: React.FC = () => {
   const { selectedCard, setSelectedCard } = useSelectPlanetStore();
 
   return (
-    <div className="flex items-center justify-center">
-      <div className="flex h-[400px] overflow-hidden">
+    <div
+      className={cn(
+        "fixed inset-x-0 bottom-0 flex h-fit items-center justify-start",
+      )}
+    >
+      <div
+        className={cn(
+          "flex h-[400px] overflow-hidden",
+          "max-w-screen-2xl px-4 pb-8 sm:px-6 lg:px-8",
+        )}
+      >
         {cardData.map((card) => (
           <React.Fragment key={card.id}>
             <input
