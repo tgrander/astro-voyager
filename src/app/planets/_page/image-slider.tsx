@@ -2,6 +2,7 @@
 
 import React from "react";
 
+import { CldImage } from "@/common/image";
 import { cn } from "@/utils";
 
 import { useSelectDestinationStore } from "../_state/useSelectDestinationStore";
@@ -14,6 +15,8 @@ interface Props {
 export function ImageCardSlider({ destinations }: Props) {
   const { selectedDestination, setSelectedDestination } =
     useSelectDestinationStore();
+
+  console.log("destinations", destinations);
 
   return (
     <div className="w-full">
@@ -32,9 +35,17 @@ export function ImageCardSlider({ destinations }: Props) {
             <label
               htmlFor={destination.slug}
               className={`ease-cubic m-2 cursor-pointer overflow-hidden rounded-2xl bg-red-500 transition-all duration-700
-                                                        ${selectedDestination?.id === destination.id ? "w-[600px]" : "w-[80px]"} bg-cover bg-center bg-no-repeat shadow-2xl`}
+                                                        ${selectedDestination?.id === destination.id ? "w-[300px]" : "w-[80px]"} bg-cover bg-center bg-no-repeat shadow-2xl`}
               style={{ backgroundImage: `url(${destination.heroImage})` }}
             >
+              <CldImage
+                height={1000}
+                width={1000}
+                src={destination?.heroImage ?? ""}
+                alt={destination?.name ?? ""}
+                className={cn("h-full w-full object-cover")}
+              />
+
               <div className="flex">
                 <div className="m-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-800 text-white">
                   {/* {index} */}
