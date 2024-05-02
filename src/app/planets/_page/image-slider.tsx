@@ -6,73 +6,47 @@ import { cn } from "@/utils";
 
 import { useSelectDestinationStore } from "../_state/useSelectDestinationStore";
 
-interface CardData {
-  id: string;
-  title: string;
-  description: string;
-  img: string; // Update the image paths to match your project's public directory if necessary
+import type { PlanetSearch } from "@/api/types";
+interface Props {
+  destinations: PlanetSearch["destinations"];
 }
 
-const cardData: CardData[] = [
-  {
-    id: "c1",
-    title: "Winter",
-    description: "Winter has so much to offer - creative activities",
-    img: "/img1.jpeg",
-  },
-  {
-    id: "c2",
-    title: "Digital Technology",
-    description: "Gets better every day - stay tuned",
-    img: "/img2.jpeg",
-  },
-  {
-    id: "c3",
-    title: "Globalization",
-    description: "Help people all over the world",
-    img: "/img3.jpeg",
-  },
-  {
-    id: "c4",
-    title: "New technologies",
-    description: "Space engineering becomes more and more advanced",
-    img: "/img4.jpeg",
-  },
-];
-
-export const ImageCardSlider: React.FC = () => {
-  const { selectedCard, setSelectedCard } = useSelectDestinationStore();
+export function ImageCardSlider({ destinations }: Props) {
+  const { selectedDestination, setSelectedDestination } =
+    useSelectDestinationStore();
 
   return (
     <div className="w-full">
       <div className={cn("flex h-[400px] overflow-hidden")}>
-        {cardData.map((card) => (
-          <React.Fragment key={card.id}>
+        {destinations.map((destination) => (
+          <React.Fragment key={destination.id}>
             <input
               type="radio"
-              id={card.id}
+              id={destination.slug}
               name="slide"
               className="hidden"
-              checked={selectedCard === card.id}
-              onChange={() => setSelectedCard(card.id)}
+              checked={selectedDestination?.id === destination.id}
+              onChange={() => setSelectedDestination(destination)}
             />
 
             <label
-              htmlFor={card.id}
+              htmlFor={destination.slug}
               className={`ease-cubic m-2 cursor-pointer overflow-hidden rounded-2xl bg-red-500 transition-all duration-700
-                                                        ${selectedCard === card.id ? "w-[600px]" : "w-[80px]"} bg-cover bg-center bg-no-repeat shadow-2xl`}
-              style={{ backgroundImage: `url(${card.img})` }}
+                                                        ${selectedDestination?.id === destination.id ? "w-[600px]" : "w-[80px]"} bg-cover bg-center bg-no-repeat shadow-2xl`}
+              style={{ backgroundImage: `url(${destination.heroImage})` }}
             >
               <div className="flex">
                 <div className="m-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-800 text-white">
-                  {card.id.slice(1)}
+                  {/* {index} */}
                 </div>
                 <div
                   className={`flex h-20 w-full flex-col items-start justify-center overflow-hidden transition-all duration-300 ease-in
-                                            ${selectedCard === card.id ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+                                            ${selectedDestination?.id === destination.id ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
                 >
-                  <h4 className="uppercase text-white">{card.title}</h4>
-                  <p className="pt-1 text-gray-200">{card.description}</p>
+                  <h4 className="uppercase text-white">{destination.name}</h4>
+                  <p className="pt-1 text-gray-200">
+                    {destination.description}
+                  </p>
                 </div>
               </div>
             </label>
@@ -81,4 +55,4 @@ export const ImageCardSlider: React.FC = () => {
       </div>
     </div>
   );
-};
+}

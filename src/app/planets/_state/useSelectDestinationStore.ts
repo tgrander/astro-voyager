@@ -1,13 +1,16 @@
 import { create } from "zustand";
 
-// Define a type for the slice of state that the CardSlider will use
+import type { PlanetSearch } from "@/api/types";
+
+type Destination = PlanetSearch["destinations"] extends (infer U)[] ? U : never;
+
 interface CardSliderState {
-  selectedCard: string; // ID of the selected card
-  setSelectedCard: (id: string) => void; // Function to update the selected card
+  selectedDestination: Destination | null;
+  setSelectedDestination: (destination: Destination) => void;
 }
 
-// Create a Zustand store with the state and functions
 export const useSelectDestinationStore = create<CardSliderState>((set) => ({
-  selectedCard: "c1", // Initial state: ID of the initially selected card
-  setSelectedCard: (id: string) => set({ selectedCard: id }),
+  selectedDestination: null,
+  setSelectedDestination: (destination) =>
+    set({ selectedDestination: destination }),
 }));

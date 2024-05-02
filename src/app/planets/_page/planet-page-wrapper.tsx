@@ -39,7 +39,7 @@ export function PlanetPageWrapper({ planets }: { planets: PlanetsSearch }) {
       {/* Destinations */}
       <div className={cn("absolute inset-x-0 bottom-0")}>
         <ContentLayout className="w-full pb-12 lg:pt-24">
-          <ImageCardSlider />
+          <ImageCardSlider destinations={selectedPlanet?.destinations ?? []} />
         </ContentLayout>
       </div>
     </div>
