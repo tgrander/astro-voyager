@@ -18,6 +18,7 @@ export const auroraArboretum: NewDestination = {
   heroImage: "skywalker/destinations/leixmoythzbilyh6l4dk",
   planet: {
     name: "Earth",
+    slug: "earth",
     image: "skywalker/planets/c5seuo0awpmwudl0kdp9",
   },
   imageUrls: [],

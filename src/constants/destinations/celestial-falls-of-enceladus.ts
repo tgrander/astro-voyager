@@ -22,6 +22,7 @@ export const celestialFallsOfEnceladus: NewDestination = {
   heroImage: "skywalker/destinations/exjdxv9m8bi7jwwegkye",
   planet: {
     name: "Saturn",
+    slug: "saturn",
     image: "skywalker/planets/ofwlgtac1sanltemy0db",
   },
   imageUrls: [],

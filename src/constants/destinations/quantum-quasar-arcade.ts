@@ -43,6 +43,7 @@ export const quantumQuasarArcade: NewDestination = {
   ],
   planet: {
     name: "Dormant Quasar",
+    slug: "dormant-quasar",
     image: "skywalker/planets/lxh9kgud4htsdkv8veps",
   },
 };

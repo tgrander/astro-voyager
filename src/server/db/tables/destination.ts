@@ -12,6 +12,7 @@ import {
 import { createTable } from "../create-table";
 
 interface Planet {
+  slug: string;
   name: string;
   image: string;
 }

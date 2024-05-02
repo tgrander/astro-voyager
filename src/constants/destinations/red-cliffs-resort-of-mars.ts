@@ -39,6 +39,7 @@ export const redCliffsResortOfMars: NewDestination = {
   ],
   planet: {
     name: "Mars",
+    slug: "mars",
     image: "skywalker/planets/bazxdxubljac3u6oibrn",
   },
 };

@@ -45,6 +45,7 @@ export const novaPolarisStation: NewDestination = {
   ],
   planet: {
     name: "Polaris",
+    slug: "polaris",
     image: "skywalker/planets/oqlfjlw3dyqhx55jr1xw",
   },
 };

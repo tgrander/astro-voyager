@@ -38,6 +38,7 @@ export const plasmaBeachesOfMercury: NewDestination = {
   ],
   planet: {
     name: "Mercury",
+    slug: "mercury",
     image: "skywalker/planets/bi5bukoq1irqv4kwc4ds",
   },
 };

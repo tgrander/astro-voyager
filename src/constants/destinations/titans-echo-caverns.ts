@@ -43,6 +43,7 @@ export const titansEchoCaverns: NewDestination = {
   ],
   planet: {
     name: "Saturn",
+    slug: "saturn",
     image: "skywalker/planets/ofwlgtac1sanltemy0db",
   },
 };

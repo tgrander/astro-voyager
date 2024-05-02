@@ -38,6 +38,7 @@ export const nebulaVineyard: NewDestination = {
   historicalEvents: ["Foundation in 2120", "First vintage released in 2125"],
   planet: {
     name: "Orion Nebula",
+    slug: "orion-nebula",
     image: "skywalker/planets/kxmsqguenmhsduy9kd4w",
   },
 };

@@ -8,6 +8,7 @@ export const silicaSandsOfIo: NewDestination = {
   location: "Io, Jupiter's Moon",
   planet: {
     name: "Jupiter",
+    slug: "jupiter",
     image: "skywalker/planets/qc6m1xiecp7xeunagvsx",
   },
   coordinates: "18°N, 55°W",

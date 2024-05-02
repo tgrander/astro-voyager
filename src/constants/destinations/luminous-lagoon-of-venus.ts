@@ -15,6 +15,7 @@ export const luminousLagoonOfVenus: NewDestination = {
   imageUrls: [],
   planet: {
     name: "Venus",
+    slug: "venus",
     image: "skywalker/planets/ugyvue8v07gbrtodvsvq",
   },
   climate: "Controlled ambient within cloud cities",
