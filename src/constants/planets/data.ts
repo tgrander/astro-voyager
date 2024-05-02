@@ -1,15 +1,67 @@
 import type { NewPlanet } from "@/server/db/helpers";
 
+const alienPlanetData: NewPlanet[] = [
+  {
+    name: "Aquarion",
+    slug: "aquarion",
+    description:
+      "An entirely aquatic planet with deep oceans covering its surface, home to a rich variety of marine life and underwater cities.",
+    type: "Terrestrial Planet",
+    species: "Alien",
+    location: "Andromeda Galaxy, Poseidon Constellation",
+    distanceFromSun: "About 150 AU (22.4 billion km)",
+    orbitalPeriod: "687 Earth days",
+    rotationPeriod: "30 Earth hours",
+    diameter: 12742,
+    climate: "Aquatic",
+    gravity: "0.97 Earth gravity",
+    moons: [
+      {
+        name: "Neptunea",
+        description: "Known for its vast ocean and underwater caves.",
+      },
+      {
+        name: "Hydrus",
+        description:
+          "Characterized by its extensive coral reefs and diverse marine life.",
+      },
+    ],
+    ringSystem: true,
+    atmosphere: {
+      hydrogen: 3.0,
+      helium: 2.0,
+      oxygenLevel: 28.0,
+      nitrogen: 67.0,
+      carbonDioxide: 0.1,
+      methane: 0.005,
+      traceGases: 0.015,
+      waterVapor: 10.0,
+    },
+    imageUrls: [
+      "https://res.cloudinary.com/skywalker/planets/aquarion_view_01",
+    ],
+    discoveryDate: "2099",
+    discoveredBy: "Dr. Luna Marin",
+    notableFeatures:
+      "Aquarion is famous for its underwater cities, extensive coral reefs, and the Aquatic Opera House, known for performances by native species.",
+    habitability:
+      "Highly habitable for aqua-amphibious species and equipped with advanced underwater living technologies for others.",
+    status: "Open for Visits",
+    heroImage: "skywalker/icons/planets/pink_rzeft1",
+  },
+];
+
 export const planetData: NewPlanet[] = [
   // EARTH
   {
     name: "Earth",
-    heroImage: "skywalker/planets/c5seuo0awpmwudl0kdp9",
+    heroImage: "skywalker/icons/planets/pink_rzeft1",
 
     slug: "earth",
     description:
       "Our home planet, known for its vast oceans, diverse ecosystems, and rich history.",
     type: "Terrestrial Planet",
+    species: "Human",
     location: "Third planet from the Sun",
     distanceFromSun: "About 1 AU (149.6 million km)",
     orbitalPeriod: "1.0",
@@ -49,6 +101,7 @@ export const planetData: NewPlanet[] = [
     description:
       "Known for its extensive ring system, Saturn is a gas giant with a magnetic field stronger than Earth's. It is enveloped by over a hundred rings made of ice and rock.",
     type: "Gas Giant",
+    species: "Human",
     location: "Sixth planet from the Sun",
     distanceFromSun: "About 9.58 AU (1.43 billion km)",
     orbitalPeriod: "29.5",
@@ -77,7 +130,7 @@ export const planetData: NewPlanet[] = [
     habitability: "Non-habitable",
     status: "Research Only",
     slug: "saturn",
-    heroImage: "skywalker/planets/ofwlgtac1sanltemy0db",
+    heroImage: "skywalker/icons/planets/pink_rzeft1",
     atmosphere: {
       oxygenLevel: 0,
       carbonDioxide: 0,
@@ -96,6 +149,7 @@ export const planetData: NewPlanet[] = [
     description:
       "Often called Earth's 'sister planet' due to its similar size and proximity to the Sun, Venus is covered in a thick atmosphere that traps heat.",
     type: "Terrestrial Planet",
+    species: "Human",
     location: "Second planet from the Sun",
     distanceFromSun: "About 0.72 AU (108 million km)",
     orbitalPeriod: "0.6152",
@@ -116,7 +170,7 @@ export const planetData: NewPlanet[] = [
     imageUrls: [
       "https://res.cloudinary.com/skywalker/planets/ugyvue8v07gbrtodvsvq",
     ],
-    heroImage: "skywalker/planets/ugyvue8v07gbrtodvsvq",
+    heroImage: "skywalker/icons/planets/pink_rzeft1",
     discoveryDate: "Prehistoric",
     discoveredBy: "Ancient Observers",
     notableFeatures: "Known for its runaway greenhouse effect.",
@@ -129,6 +183,7 @@ export const planetData: NewPlanet[] = [
     description:
       "A diffuse nebula situated in the Milky Way, being south of Orion's Belt in the constellation of Orion. It is one of the brightest nebulae, visible to the naked eye in the night sky.",
     type: "Nebula",
+    species: "Alien",
     location: "Milky Way Galaxy, Orion Constellation",
     distanceFromSun: "About 89.87 AU (1.34 billion km)",
     orbitalPeriod: null,
@@ -158,7 +213,7 @@ export const planetData: NewPlanet[] = [
     habitability:
       "Not habitable due to being a vast cloud of gas and dust without a solid surface.",
     status: "Open for Observation",
-    heroImage: "skywalker/planets/kxmsqguenmhsduy9kd4w",
+    heroImage: "skywalker/icons/planets/pink_rzeft1",
     slug: "orion-nebula",
   },
   // POLARIS
@@ -168,6 +223,7 @@ export const planetData: NewPlanet[] = [
     description:
       "Known as the North Star, serves as an important fixed point for navigation and is located at the end of the Little Dipper's handle.",
     type: "Variable Star",
+    species: "Human",
     location: "End of the Little Dipper's handle",
     distanceFromSun: "About 2.89 light-years",
     orbitalPeriod: "0.0",
@@ -183,7 +239,7 @@ export const planetData: NewPlanet[] = [
     notableFeatures: "Crucial for celestial navigation, marking true north.",
     habitability: "Not habitable",
     status: "Restricted",
-    heroImage: "skywalker/planets/oqlfjlw3dyqhx55jr1xw",
+    heroImage: "skywalker/icons/planets/pink_rzeft1",
     atmosphere: {
       hydrogen: 70.0,
       helium: 28.0,
@@ -202,6 +258,7 @@ export const planetData: NewPlanet[] = [
     description:
       "The smallest planet in our solar system and closest to the Sun, known for its extreme temperature fluctuations.",
     type: "Terrestrial Planet",
+    species: "Human",
     location: "First planet from the sun",
     distanceFromSun: "About 0.39 AU (58 million km)",
     orbitalPeriod: "0.24",
@@ -223,7 +280,7 @@ export const planetData: NewPlanet[] = [
     notableFeatures: "Has a very thin atmosphere and no natural satellites.",
     habitability: "Not habitable",
     status: "Research Only",
-    heroImage: "skywalker/planets/bi5bukoq1irqv4kwc4ds",
+    heroImage: "skywalker/icons/planets/pink_rzeft1",
   },
   // MARS
   {
@@ -232,6 +289,7 @@ export const planetData: NewPlanet[] = [
     description:
       "Known as the Red Planet, Mars bears a striking red appearance due to iron oxide prevalent on its surface.",
     type: "Terrestrial Planet",
+    species: "Human",
     location: "Fourth planet from the sun",
     distanceFromSun: "About 1.52 AU (227 million km)",
     orbitalPeriod: "1.88",
@@ -264,7 +322,7 @@ export const planetData: NewPlanet[] = [
       "Home to the largest volcano and the deepest, longest canyon in the solar system.",
     habitability: "Potentially habitable with human intervention",
     status: "Open for Visits",
-    heroImage: "skywalker/planets/bazxdxubljac3u6oibrn",
+    heroImage: "skywalker/icons/planets/pink_rzeft1",
   },
   // JUPITER
   {
@@ -273,6 +331,7 @@ export const planetData: NewPlanet[] = [
     description:
       "The largest planet in our solar system, known for its magnificent storms including the Great Red Spot.",
     type: "Gas Giant",
+    species: "Human",
     location: "Fifth planet from the Sun",
     distanceFromSun: "About 5.20 AU (778 million km)",
     orbitalPeriod: "11.86",
@@ -317,7 +376,7 @@ export const planetData: NewPlanet[] = [
     habitability:
       "Not suitable for human life due to extreme pressure and composition",
     status: "Open for Visits",
-    heroImage: "skywalker/planets/qc6m1xiecp7xeunagvsx",
+    heroImage: "skywalker/icons/planets/pink_rzeft1",
   },
   // SATURN
   {
@@ -325,6 +384,7 @@ export const planetData: NewPlanet[] = [
     description:
       "The sixth planet from the Sun and the second-largest in our solar system, Saturn is famed for its stunning ring system, composed of ice particles, rocky debris, and dust.",
     type: "Gas Giant",
+    species: "Human",
     location: "Sixth planet from the Sun",
     distanceFromSun: "About 9.54 AU (1.43 billion km)",
     orbitalPeriod: "29.4571",
@@ -376,7 +436,7 @@ export const planetData: NewPlanet[] = [
     habitability:
       "Not habitable due to extreme pressures and temperatures, lack of a solid surface, and intense radiation.",
     status: "Research Only",
-    heroImage: "skywalker/planets/ofwlgtac1sanltemy0db",
+    heroImage: "skywalker/icons/planets/pink_rzeft1",
     slug: "saturn",
   },
   // DORMANT QUASAR / BLACK HOLE
@@ -385,6 +445,7 @@ export const planetData: NewPlanet[] = [
     description:
       "A formerly active quasar now in a dormant state, located at the edge of the observable universe. Once a bright beacon of immense energy, it now serves as a mysterious relic of the cosmos's dynamic past.",
     type: "Quasar",
+    species: "Alien",
     location: "Edge of the Observable Universe",
     distanceFromSun: "About 24.30 million light-years",
     orbitalPeriod: null,
@@ -412,7 +473,7 @@ export const planetData: NewPlanet[] = [
     habitability:
       "Not habitable, as quasars represent the extremely energetic and distant phenomena associated with supermassive black holes at the center of galaxies.",
     status: "Open for Observation",
-    heroImage: "skywalker/planets/lxh9kgud4htsdkv8veps.png",
+    heroImage: "skywalker/icons/planets/pink_rzeft1",
     slug: "dormant-quasar",
   },
 ];

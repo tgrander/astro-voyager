@@ -54,6 +54,11 @@ export const planetStatusEnum = pgEnum("planet_status", [
   "Closed",
 ] as const);
 
+export const planetSpeciesEnum = pgEnum("planet_species", [
+  "Alien",
+  "Human",
+] as const);
+
 export const planets = createTable(
   "planets",
   {
@@ -62,6 +67,7 @@ export const planets = createTable(
     slug: varchar("slug", { length: 300 }).notNull(),
     description: text("description").notNull(),
     type: celestialTypeEnum("type").notNull(),
+    species: planetSpeciesEnum("species").notNull(),
     location: varchar("location", { length: 255 }).notNull(),
     distanceFromSun: text("distance_from_sun").notNull(),
     orbitalPeriod: decimal("orbital_period", {

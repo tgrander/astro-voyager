@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const periwinkle = {
   "50": "#eeeffd",
@@ -24,6 +25,17 @@ const radiant = {
   "800": "#561180",
   "900": "#420d61",
 };
+
+interface ColorShades {
+  500: string;
+  700: string;
+}
+type ColorTheme = Record<string, ColorShades | string>;
+
+type UtilityStyles = {
+  boxShadow: string;
+};
+type NeonUtilities = Record<string, UtilityStyles>;
 
 const config = {
   darkMode: ["class"],
@@ -161,6 +173,28 @@ const config = {
     require("tailwindcss-animate"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/container-queries"),
+    plugin(({ theme, addUtilities }) => {
+      const neonUtilities: NeonUtilities = {};
+      const colors: ColorTheme = theme("colors");
+
+      for (const color in colors) {
+        const colorValues = colors[color];
+        // Check if the colorValues is an object and has the expected shades
+        if (
+          typeof colorValues === "object" &&
+          "500" in colorValues &&
+          "700" in colorValues
+        ) {
+          const color1 = colorValues[500];
+          const color2 = colorValues[700];
+          const className = `.neon-${color}`;
+          neonUtilities[className] = {
+            boxShadow: `0 0 20px ${color1}, 0 0 50px ${color2}`,
+          };
+        }
+      }
+      addUtilities(neonUtilities);
+    }),
   ],
 } satisfies Config;
 

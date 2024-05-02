@@ -25,20 +25,20 @@ export function PlanetCard({ planet }: Props) {
         isFooterBlurred={true}
         radius="lg"
         className={cn(
-          "m-1 h-[75px] w-[75px] flex-shrink-0 border-none",
-          "cursor-pointer",
+          "m-1 h-[50px] w-[50px] flex-shrink-0 border-none",
+          "cursor-pointer rounded-full",
           {
-            "border-2 border-white": isSelected,
+            "neon-pink": isSelected,
           },
         )}
       >
         <CldImage
           src={planet.heroImage ?? ""}
           alt={planet.name}
-          height={150}
-          width={150}
-          className={cn("h-[150px] w-full object-cover", {
-            "rounded-full border-2 border-white": isSelected,
+          height={100}
+          width={100}
+          className={cn("h-[100px] w-full object-cover", {
+            "rounded-full": isSelected,
           })}
         />
         <CardBody>

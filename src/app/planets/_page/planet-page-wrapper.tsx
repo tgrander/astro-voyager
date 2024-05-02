@@ -15,7 +15,7 @@ export function PlanetPageWrapper({ planets }: { planets: PlanetsSearch }) {
   return (
     <div className="static flex min-h-screen flex-grow flex-col">
       {/* Planets List */}
-      <ContentLayout className="z-50">
+      <ContentLayout className="z-50 py-10">
         <PlanetsSelectList planets={planets}></PlanetsSelectList>
       </ContentLayout>
 

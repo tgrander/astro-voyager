@@ -22,7 +22,7 @@ export function PlanetsSelectList(props: Props) {
   }, [selectedPlanet, setSelectedPlanet, props.planets]);
 
   return (
-    <div className="relative flex items-center justify-start gap-10">
+    <div className="relative flex items-center justify-between gap-10">
       {props.planets.map((planet) => (
         <PlanetCard key={planet.id} planet={planet} />
       ))}
