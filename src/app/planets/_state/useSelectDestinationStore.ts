@@ -7,7 +7,7 @@ interface CardSliderState {
 }
 
 // Create a Zustand store with the state and functions
-export const useSelectPlanetStore = create<CardSliderState>((set) => ({
+export const useSelectDestinationStore = create<CardSliderState>((set) => ({
   selectedCard: "c1", // Initial state: ID of the initially selected card
   setSelectedCard: (id: string) => set({ selectedCard: id }),
 }));

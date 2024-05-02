@@ -4,7 +4,7 @@ import React from "react";
 
 import { cn } from "@/utils";
 
-import { useSelectPlanetStore } from "../_state/useSelectPlanetStore"; // Assume this store setup from previous instructions
+import { useSelectDestinationStore } from "../_state/useSelectDestinationStore"; // Assume this store setup from previous instructions
 
 interface CardData {
   id: string;
@@ -41,7 +41,7 @@ const cardData: CardData[] = [
 ];
 
 export const ImageCardSlider: React.FC = () => {
-  const { selectedCard, setSelectedCard } = useSelectPlanetStore();
+  const { selectedCard, setSelectedCard } = useSelectDestinationStore();
 
   return (
     <div
