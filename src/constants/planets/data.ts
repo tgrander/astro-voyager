@@ -1,6 +1,56 @@
 import type { NewPlanet } from "@/server/db/helpers";
 
 const alien: NewPlanet[] = [
+  // Neonix
+  {
+    name: "Neonix",
+    description:
+      "A cyberpunk planet famed for its human-like androids and notorious adult themes, Neonix is a high-stakes, neon-lit world where corporate power battles underground rebellions in a never-ending dance of intrigue and survival.",
+    type: "Artificial",
+    species: "Hybrid",
+    location: "Vega System",
+    distanceFromSun: "About 320 AU (47.9 billion km)",
+    orbitalPeriod: "525 Earth days",
+    rotationPeriod: "33 Earth hours",
+    diameter: 12300,
+    climate: "Controlled Atmospheric Conditions",
+    gravity: "1.0 Earth gravity",
+    moons: [
+      {
+        name: "Decay",
+        description: "Known for its vast ocean and underwater caves.",
+      },
+      {
+        name: "Pulse",
+        description:
+          "Characterized by its extensive coral reefs and diverse marine life.",
+      },
+    ],
+    ringSystem: false,
+    atmosphere: {
+      hydrogen: 5.0,
+      helium: 2.0,
+      oxygenLevel: 21.0,
+      nitrogen: 70.0,
+      carbonDioxide: 1.0,
+      methane: 0.5,
+      traceGases: 0.5,
+      waterVapor: 2.0,
+    },
+    imageUrls: [
+      "https://res.cloudinary.com/skywalker/planets/neonix_night_view",
+    ],
+    discoveryDate: "2310",
+    discoveredBy: "Corporation: Synthetix",
+    notableFeatures:
+      "Neonix is renowned for its sprawling neon landscapes, android-dominated society, and as a hub for cybernetic enhancements and AI research.",
+    habitability:
+      "Fully habitable with extensive urban environments tailored for both organic and synthetic life forms.",
+    status: "Open for Visits",
+    heroImage: "skywalker/planets/neonix_hero_image",
+    slug: "neonix",
+  },
+
   // Caelux
   {
     name: "Caelux",
@@ -97,6 +147,56 @@ const alien: NewPlanet[] = [
     status: "Open for Visits",
     heroImage: "skywalker/planets/seraphis_hero_image",
     slug: "seraphis",
+  },
+
+  // Valyrian
+  {
+    name: "Valyrian",
+    description:
+      "A planet of spectacular beauty, Valyrian boasts enormous waterfalls plunging from floating islands, lush tropical archipelagos, and high-tech cities that defy gravity. The planet's atmosphere supports various unique ecosystems and advanced civilizations.",
+    type: "Terrestrial Planet",
+    species: "Hybrid",
+    location: "Eridani Sector, Star System Helios",
+    distanceFromSun: "About 210 AU (31.5 billion km)",
+    orbitalPeriod: "480 Earth days",
+    rotationPeriod: "28 Earth hours",
+    diameter: 15000,
+    climate: "Varied - ranging from temperate to tropical",
+    gravity: "0.9 Earth gravity",
+    moons: [
+      {
+        name: "Lyra",
+        description: "Known for its vast ocean and underwater caves.",
+      },
+      {
+        name: "Thalos",
+        description:
+          "Characterized by its extensive coral reefs and diverse marine life.",
+      },
+    ],
+    ringSystem: false,
+    atmosphere: {
+      hydrogen: 10.0,
+      helium: 5.0,
+      oxygenLevel: 25.0,
+      nitrogen: 58.0,
+      carbonDioxide: 1.5,
+      methane: 0.2,
+      traceGases: 0.3,
+      waterVapor: 10.0,
+    },
+    imageUrls: [
+      "https://res.cloudinary.com/skywalker/planets/valyrian_view_01",
+    ],
+    discoveryDate: "2245",
+    discoveredBy: "Dr. Elara Mivon",
+    notableFeatures:
+      "Known for its floating cities and massive waterfalls, Valyrian is a center for intergalactic tourism and diverse ecological research.",
+    habitability:
+      "Highly habitable with advanced environmental control systems within the cities.",
+    status: "Open for Visits",
+    heroImage: "skywalker/planets/valyrian_hero_image",
+    slug: "valyrian",
   },
 
   // Aquarion
