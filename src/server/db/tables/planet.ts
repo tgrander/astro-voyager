@@ -57,6 +57,9 @@ export const planetStatusEnum = pgEnum("planet_status", [
 export const planetSpeciesEnum = pgEnum("planet_species", [
   "Alien",
   "Human",
+  "Robotic",
+  "Hybrid",
+  "Unknown",
 ] as const);
 
 export const planets = createTable(

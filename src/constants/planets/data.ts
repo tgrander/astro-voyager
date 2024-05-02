@@ -1,6 +1,105 @@
 import type { NewPlanet } from "@/server/db/helpers";
 
-const alienPlanetData: NewPlanet[] = [
+const alien: NewPlanet[] = [
+  // Caelux
+  {
+    name: "Caelux",
+    description:
+      "A vibrant gas giant known for its majestic floating cities, which hover gracefully within its dense, dynamically charged atmospheric layers, famous for vivid lightning storms.",
+    type: "Gas Giant",
+    species: "Hybrid",
+    location: "Andromeda Galaxy, Luminous Sector",
+    distanceFromSun: "About 300 AU (44.8 billion km)",
+    orbitalPeriod: "690 Earth days",
+    rotationPeriod: "16 Earth hours",
+    diameter: 142000,
+    climate: "Temperate with frequent dynamic storm activity",
+    gravity: "1.1 times Earth gravity",
+    moons: [
+      {
+        name: "Miranda",
+        description: "Known for its vast ocean and underwater caves.",
+      },
+      {
+        name: "Thesan",
+        description:
+          "Characterized by its extensive coral reefs and diverse marine life.",
+      },
+    ],
+    ringSystem: true,
+    atmosphere: {
+      hydrogen: 70.0,
+      helium: 25.0,
+      oxygenLevel: 3.5,
+      nitrogen: 1.0,
+      carbonDioxide: 0.3,
+      methane: 0.1,
+      traceGases: 0.1,
+      waterVapor: 5.0,
+    },
+    imageUrls: ["https://res.cloudinary.com/skywalker/planets/caelux_view_01"],
+    discoveryDate: "2122",
+    discoveredBy: "Dr. Ava Starling",
+    notableFeatures:
+      "Caelux is celebrated for its innovative energy harnessing technologies, its floating cities utilizing atmospheric electricity, and its cultural festivals that integrate art and technology.",
+    habitability:
+      "Highly habitable for diverse species due to advanced climate control technologies within the floating cities.",
+    status: "Open for Visits",
+    heroImage: "skywalker/planets/caelux_hero_image",
+    slug: "caelux",
+  },
+
+  // Seraphis
+  {
+    name: "Seraphis",
+    description:
+      "A stunning gas giant known for its visually striking floating cities and dynamic atmospheric phenomena, Seraphis is a hub of innovation and culture, celebrated for its art, technology, and unique adaptability to the planet's intense storm activity.",
+    type: "Gas Giant",
+    species: "Hybrid",
+    location: "Garnet Star System, Nebular Sector",
+    distanceFromSun: "Approximately 450 AU (67.5 billion km)",
+    orbitalPeriod: "3100 Earth days",
+    rotationPeriod: "19 Earth hours",
+    diameter: 119000,
+    climate: "Highly variable with frequent powerful storm systems",
+    gravity: "2.5 times Earth gravity",
+    moons: [
+      {
+        name: "Stratos",
+        description: "Known for its vast ocean and underwater caves.",
+      },
+      {
+        name: "Cirron",
+        description:
+          "Characterized by its extensive coral reefs and diverse marine life.",
+      },
+    ],
+    ringSystem: true,
+    atmosphere: {
+      hydrogen: 72.0,
+      helium: 21.5,
+      oxygenLevel: 2.0,
+      nitrogen: 3.2,
+      carbonDioxide: 0.5,
+      methane: 0.3,
+      traceGases: 0.5,
+      waterVapor: 4.0,
+    },
+    imageUrls: [
+      "https://res.cloudinary.com/skywalker/planets/seraphis_view_01",
+    ],
+    discoveryDate: "2184",
+    discoveredBy: "Explorer Corps Unit 52",
+    notableFeatures:
+      "Known for its Electrum Bridges that connect the floating cities, which are designed to harness and utilize the planet’s atmospheric electricity. Seraphis is also famous for its cultural festivals that are synchronized with the planet's natural electrical displays.",
+    habitability:
+      "Habitable within floating cities equipped with advanced life support and environmental control systems.",
+    status: "Open for Visits",
+    heroImage: "skywalker/planets/seraphis_hero_image",
+    slug: "seraphis",
+  },
+
+  // Aquarion
   {
     name: "Aquarion",
     slug: "aquarion",
