@@ -39,7 +39,8 @@ export default function RootLayout({
         )}
       >
         <Providers>
-          <SidebarLayout>{children}</SidebarLayout>
+          {/* <SidebarLayout>{children}</SidebarLayout> */}
+          {children}
         </Providers>
       </body>
     </html>
