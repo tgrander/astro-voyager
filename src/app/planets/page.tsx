@@ -7,16 +7,16 @@ export default async function PlanetsPage() {
   const planets = await api.planet.search();
 
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex min-h-full flex-col">
       <h1>Planets Page</h1>
 
-      <div className="flex items-center justify-start gap-10">
+      <div className="flex items-center justify-start gap-10 pl-16">
         {planets.map((planet) => (
           <PlanetCard key={planet.id} planet={planet} />
         ))}
       </div>
 
-      <div>
+      <div className="flex flex-grow flex-col">
         <ImageCardSlider />
       </div>
     </div>

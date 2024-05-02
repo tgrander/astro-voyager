@@ -13,7 +13,7 @@ export function PlanetCard({ planet }: Props) {
     <Card
       isFooterBlurred={true}
       radius="lg"
-      className="m-1 h-[250px] w-[250px] flex-shrink-0 border-none"
+      className="m-1 h-[75px] w-[75px] flex-shrink-0 border-none"
     >
       <CldImage
         src={planet.heroImage ?? ""}
