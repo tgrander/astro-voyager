@@ -1,6 +1,5 @@
 import type { NewDestination } from "@/server/db/helpers";
 
-// Alien Planet Destinations
 import { data as aquarion } from "./aquarion/data";
 import { auroraArboretum } from "./aurora-arboretum";
 import { data as caelux } from "./caelux/data";

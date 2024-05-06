@@ -27,8 +27,8 @@ const destinations = [
     },
   },
   {
-    name: "Neon Bazaar",
-    slug: "neon-bazaar",
+    name: "Interstellar Bazaar",
+    slug: "interstellar-bazaar",
     description:
       "A vibrant marketplace that never sleeps, filled with holographic stalls and neon lights, offering goods from every corner of the universe.",
     heroImage: "skywalker/destinations/neon_bazaar",

@@ -33,7 +33,7 @@ export function PlanetCard({ planet }: Props) {
         )}
       >
         <CldImage
-          src={planet.heroImage ?? ""}
+          src={planet.iconImage ?? ""}
           alt={planet.name}
           height={100}
           width={100}

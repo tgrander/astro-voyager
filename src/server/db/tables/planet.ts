@@ -73,19 +73,14 @@ export const planets = createTable(
     species: planetSpeciesEnum("species").notNull(),
     location: varchar("location", { length: 255 }).notNull(),
     distanceFromSun: text("distance_from_sun").notNull(),
-    orbitalPeriod: decimal("orbital_period", {
-      precision: 10,
-      scale: 2,
-    }),
-    rotationPeriod: decimal("rotation_period", {
-      precision: 10,
-      scale: 2,
-    }),
+    orbitalPeriod: text("orbital_period"),
+    rotationPeriod: text("rotation_period"),
     diameter: bigint("diameter", { mode: "number" }).notNull(),
     climate: varchar("climate", { length: 300 }).notNull(),
-    gravity: decimal("gravity", { precision: 5, scale: 2 }),
+    gravity: text("gravity"),
     moons: jsonb("moons").$type<Moon[]>().notNull(),
     ringSystem: boolean("ring_system").notNull(),
+    iconImage: text("icon_image"), // Cloudinary public ID
     heroImage: text("hero_image"), // Cloudinary public ID
     imageUrls: jsonb("image_urls").$type<string[]>().notNull(),
     discoveryDate: text("discovery_date").notNull(),

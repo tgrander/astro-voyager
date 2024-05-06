@@ -52,7 +52,19 @@ const destinations = [
   },
 ];
 
-export const data: NewDestination[] = destinations.map((dest) => ({
-  ...auroraArboretum,
-  ...dest,
-}));
+const imageUrls = [
+  "skywalker/destinations/saraphis/cards/yzicewmfz9p3pah07hhx",
+  "skywalker/destinations/saraphis/cards/f2z25wuoyql91jbaimza",
+  "skywalker/destinations/saraphis/cards/lmxt3vocwtio8uaohieb",
+  "skywalker/destinations/saraphis/cards/rulotc6tkp2ow5wgpkbb",
+];
+
+export const data: NewDestination[] = destinations
+  .map((dest) => ({
+    ...auroraArboretum,
+    ...dest,
+  }))
+  .map((d) => ({
+    ...d,
+    imageUrls,
+  }));
