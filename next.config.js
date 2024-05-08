@@ -21,6 +21,7 @@ const config = {
       },
     ],
   },
+  transpilePackages: ["three"],
 };
 
 export default config;
