@@ -10,11 +10,7 @@ import {
   Lightformer,
   OrbitControls,
   PivotControls,
-  useHelper,
 } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
-
-import type { DirectionalLight } from "three";
 
 export default function Page() {
   // Controls
@@ -39,10 +35,6 @@ export default function Page() {
     }
   }, []);
 
-  useFrame((state, delta) => {
-    // console.log("state", state);
-  });
-
   return (
     <>
       {/* Orbit Controls */}
@@ -64,20 +56,39 @@ export default function Page() {
         ref={pointLight}
         position={[light.position.x, light.position.y, light.position.z]}
         intensity={light.intensity}
+        decay={light.decay}
       />
 
       {/* Planet */}
-      <PivotControls anchor={[0, 0, 0]} depthTest={false} lineWidth={4}>
-        <mesh>
-          <sphereGeometry />
-          <meshStandardMaterial color={ctr.color} />
-        </mesh>
-      </PivotControls>
+      <mesh position={[ctr.position.x, ctr.position.y, ctr.position.z]}>
+        <sphereGeometry />
+        <meshStandardMaterial color={ctr.color} />
+      </mesh>
     </>
   );
 }
 
 const planetControls = {
+  position: {
+    value: {
+      x: 0,
+      y: 0,
+      z: 0,
+    },
+    min: -20,
+    max: 20,
+    step: 0.1,
+  },
+  rotation: {
+    value: {
+      x: 0,
+      y: 0,
+      z: 0,
+    },
+    min: 0,
+    max: 360,
+    step: 0.1,
+  },
   color: "#ffffff",
   background: "#0C101E",
   perf: true,
@@ -102,16 +113,10 @@ const lightControls = {
     value: 2.5,
     step: 0.1,
   },
-  shadowRadius: {
+  decay: {
     min: 0,
-    max: 50,
-    value: 10,
-    step: 0.1,
-  },
-  shadowsPosition: {
-    value: { x: 0, y: -0.99, z: 0 },
-    min: -10,
     max: 10,
+    value: 2.5,
     step: 0.1,
   },
 };

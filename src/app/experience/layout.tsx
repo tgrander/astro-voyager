@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Leva />
-      <Canvas shadows camera={{ fov: 75 }}>
+      <Canvas shadows camera={{ fov: 75, position: [0.9, 7, 2.5] }}>
         {children}
       </Canvas>
     </>
