@@ -1,52 +1,54 @@
 "use client";
 
-import { min } from "drizzle-orm";
 import { useControls } from "leva";
 import { Perf } from "r3f-perf";
 import { useEffect, useRef } from "react";
-import { DirectionalLightHelper } from "three";
+import * as THREE from "three";
 
 import {
-  AccumulativeShadows,
-  BakeShadows,
-  ContactShadows,
   Environment,
   Lightformer,
   OrbitControls,
-  RandomizedLight,
-  Sky,
-  SoftShadows,
+  PivotControls,
   useHelper,
 } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 
 import type { DirectionalLight } from "three";
+
 export default function Page() {
   // Controls
   const ctr = useControls("planet", planetControls);
-  const ctrDL = useControls("directional light", directionalLightControls);
+  const light = useControls("light", lightControls);
 
   // Refs
-  const directionalLight = useRef<DirectionalLight>(null);
+  const pointLight = useRef<THREE.PointLight>(null);
 
   // Helpers
   useEffect(() => {
-    if (directionalLight.current) {
-      const helper = new DirectionalLightHelper(directionalLight.current, 1);
-      directionalLight.current.add(helper);
+    if (pointLight.current) {
+      const helper = new THREE.PointLightHelper(pointLight.current, 1);
+      pointLight.current.add(helper);
 
       return () => {
-        if (directionalLight.current) {
-          directionalLight.current.remove(helper);
+        if (pointLight.current) {
+          pointLight.current.remove(helper);
           helper.dispose();
         }
       };
     }
   }, []);
 
+  useFrame((state, delta) => {
+    // console.log("state", state);
+  });
+
   return (
     <>
       {/* Orbit Controls */}
       <OrbitControls makeDefault />
+
+      {/* Pivot Controls */}
 
       {/* Performance */}
       {ctr.perf && <Perf position="top-left" />}
@@ -58,21 +60,19 @@ export default function Page() {
       </Environment>
 
       {/* Light */}
-      <ambientLight intensity={ctr.ambientLight} />
-
-      <directionalLight
-        ref={directionalLight}
-        castShadow
-        position={[ctrDL.position.x, ctrDL.position.y, ctrDL.position.z]}
-        intensity={ctrDL.intensity}
-        shadow-mapSize={[1024, 1024]}
+      <pointLight
+        ref={pointLight}
+        position={[light.position.x, light.position.y, light.position.z]}
+        intensity={light.intensity}
       />
 
       {/* Planet */}
-      <mesh castShadow>
-        <sphereGeometry />
-        <meshStandardMaterial color={ctr.color} />
-      </mesh>
+      <PivotControls anchor={[0, 0, 0]} depthTest={false} lineWidth={4}>
+        <mesh>
+          <sphereGeometry />
+          <meshStandardMaterial color={ctr.color} />
+        </mesh>
+      </PivotControls>
     </>
   );
 }
@@ -89,7 +89,7 @@ const planetControls = {
   },
 };
 
-const directionalLightControls = {
+const lightControls = {
   position: {
     value: { x: 8, y: 20, z: -6 },
     min: -10,
@@ -100,6 +100,18 @@ const directionalLightControls = {
     min: 0,
     max: 10,
     value: 2.5,
+    step: 0.1,
+  },
+  shadowRadius: {
+    min: 0,
+    max: 50,
+    value: 10,
+    step: 0.1,
+  },
+  shadowsPosition: {
+    value: { x: 0, y: -0.99, z: 0 },
+    min: -10,
+    max: 10,
     step: 0.1,
   },
 };
