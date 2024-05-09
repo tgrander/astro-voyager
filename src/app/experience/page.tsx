@@ -1,5 +1,6 @@
 "use client";
 
+import { min } from "drizzle-orm";
 import { useControls } from "leva";
 import { Perf } from "r3f-perf";
 import { useEffect, useRef } from "react";
@@ -64,6 +65,7 @@ export default function Page() {
         castShadow
         position={[ctrDL.position.x, ctrDL.position.y, ctrDL.position.z]}
         intensity={ctrDL.intensity}
+        shadow-mapSize={[1024, 1024]}
       />
 
       {/* Planet */}
@@ -89,11 +91,10 @@ const planetControls = {
 
 const directionalLightControls = {
   position: {
-    value: {
-      x: 1,
-      y: 2,
-      z: 3,
-    },
+    value: { x: 8, y: 20, z: -6 },
+    min: -10,
+    max: 20,
+    step: 0.1,
   },
   intensity: {
     min: 0,
