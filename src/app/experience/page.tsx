@@ -2,6 +2,8 @@
 
 import { useControls } from "leva";
 import { Perf } from "r3f-perf";
+import { useEffect, useRef } from "react";
+import { DirectionalLightHelper } from "three";
 
 import {
   AccumulativeShadows,
@@ -16,12 +18,35 @@ import {
   useHelper,
 } from "@react-three/drei";
 
+import type { DirectionalLight } from "three";
 export default function Page() {
+  // Controls
   const ctr = useControls("planet", planetControls);
   const ctrDL = useControls("directional light", directionalLightControls);
 
+  // Refs
+  const directionalLight = useRef<DirectionalLight>(null);
+
+  // Helpers
+  useEffect(() => {
+    if (directionalLight.current) {
+      const helper = new DirectionalLightHelper(directionalLight.current, 1);
+      directionalLight.current.add(helper);
+
+      return () => {
+        if (directionalLight.current) {
+          directionalLight.current.remove(helper);
+          helper.dispose();
+        }
+      };
+    }
+  }, []);
+
   return (
     <>
+      {/* Orbit Controls */}
+      <OrbitControls makeDefault />
+
       {/* Performance */}
       {ctr.perf && <Perf position="top-left" />}
 
@@ -31,8 +56,11 @@ export default function Page() {
         <Lightformer position-z={-5} scale={10} />
       </Environment>
 
+      {/* Light */}
       <ambientLight intensity={ctr.ambientLight} />
+
       <directionalLight
+        ref={directionalLight}
         position={[ctrDL.position.x, ctrDL.position.y, ctrDL.position.z]}
         intensity={0.5}
         castShadow
