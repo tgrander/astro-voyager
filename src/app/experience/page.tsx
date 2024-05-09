@@ -2,20 +2,41 @@
 
 import { useControls } from "leva";
 import { Perf } from "r3f-perf";
-import { AmbientLight } from "three";
 
-import type { Schema } from "leva/src/types";
+import {
+  AccumulativeShadows,
+  BakeShadows,
+  ContactShadows,
+  Environment,
+  Lightformer,
+  OrbitControls,
+  RandomizedLight,
+  Sky,
+  SoftShadows,
+  useHelper,
+} from "@react-three/drei";
+
 export default function Page() {
-  const ctr = useControls("planet", controls);
+  const ctr = useControls("planet", planetControls);
+  const ctrDL = useControls("directional light", directionalLightControls);
 
   return (
     <>
       {/* Performance */}
       {ctr.perf && <Perf position="top-left" />}
 
+      {/* Environment */}
+      <Environment>
+        <color args={[ctr.background]} attach="background" />
+        <Lightformer position-z={-5} scale={10} />
+      </Environment>
+
       <ambientLight intensity={ctr.ambientLight} />
-      <directionalLight position={[0, 10, 5]} intensity={1} castShadow />
-      <color attach="background" args={[ctr.background]} />
+      <directionalLight
+        position={[ctrDL.position.x, ctrDL.position.y, ctrDL.position.z]}
+        intensity={0.5}
+        castShadow
+      />
 
       {/* Planet */}
       <mesh>
@@ -26,7 +47,7 @@ export default function Page() {
   );
 }
 
-const controls = {
+const planetControls = {
   color: "#ffffff",
   background: "#0C101E",
   perf: true,
@@ -35,5 +56,15 @@ const controls = {
     max: 5,
     value: 0.1,
     step: 0.1,
+  },
+};
+
+const directionalLightControls = {
+  position: {
+    value: {
+      x: 0,
+      y: 10,
+      z: 5,
+    },
   },
 };
