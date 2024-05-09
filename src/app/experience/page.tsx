@@ -61,13 +61,13 @@ export default function Page() {
 
       <directionalLight
         ref={directionalLight}
-        position={[ctrDL.position.x, ctrDL.position.y, ctrDL.position.z]}
-        intensity={0.5}
         castShadow
+        position={[ctrDL.position.x, ctrDL.position.y, ctrDL.position.z]}
+        intensity={ctrDL.intensity}
       />
 
       {/* Planet */}
-      <mesh>
+      <mesh castShadow>
         <sphereGeometry />
         <meshStandardMaterial color={ctr.color} />
       </mesh>
@@ -90,9 +90,15 @@ const planetControls = {
 const directionalLightControls = {
   position: {
     value: {
-      x: 0,
-      y: 10,
-      z: 5,
+      x: 1,
+      y: 2,
+      z: 3,
     },
+  },
+  intensity: {
+    min: 0,
+    max: 10,
+    value: 2.5,
+    step: 0.1,
   },
 };

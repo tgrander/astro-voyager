@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Leva />
-      <Canvas>{children}</Canvas>
+      <Canvas shadows>{children}</Canvas>
     </>
   );
 }
