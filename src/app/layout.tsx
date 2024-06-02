@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 
 import { Inter } from "next/font/google";
 import { Providers } from "@/app/providers";
-// import { StickyTop } from "./_layout/sidebar-layout/sticky-top";
 import { TopNav } from "@/components/browse-destinations";
 import { cn } from "@/utils";
 

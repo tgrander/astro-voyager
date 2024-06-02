@@ -11,8 +11,6 @@ import { api } from "@/trpc/react";
 import { cn } from "@/utils/cn";
 import { useState } from "react";
 
-// import { PlanetCard } from "./navbar-search/planet-card";
-
 export function SearchBar() {
   const planetsQuery = api.planet.search.useQuery();
 
