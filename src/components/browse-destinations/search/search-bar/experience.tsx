@@ -5,16 +5,11 @@ import * as React from "react";
 import { ChevronsUpDown, X } from "lucide-react";
 import {
   Command,
-  CommandEmpty,
   CommandGroup,
-  CommandInput,
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import {
-  Destination as DestinationListItem,
-  destinations,
-} from "@/data/search";
+import { Experience as ExperienceListItem, experiences } from "@/data/search";
 import {
   Popover,
   PopoverContent,
@@ -24,10 +19,10 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-export function Destination() {
+export function Experience() {
   const [open, setOpen] = React.useState(false);
   const [selectedDestination, setSelectedDestination] =
-    React.useState<DestinationListItem | null>(null);
+    React.useState<ExperienceListItem | null>(null);
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -50,11 +45,11 @@ export function Destination() {
             })}
           >
             {selectedDestination
-              ? destinations.find(
-                  (destination) =>
-                    destination.value === selectedDestination.value,
+              ? experiences.find(
+                  (experience) =>
+                    experience.value === selectedDestination.value,
                 )?.label
-              : "Add destination"}
+              : "Add experience"}
           </p>
           <TriggerButtonIcon
             open={open}
@@ -65,36 +60,31 @@ export function Destination() {
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
         <Command>
-          <CommandInput
-            placeholder="Search destination..."
-            className="text-base"
-          />
           <CommandList>
-            <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup>
-              {destinations.map((destination) => (
+              {experiences.map((experience) => (
                 <CommandItem
-                  key={destination.value}
-                  value={destination.value}
+                  key={experience.value}
+                  value={experience.value}
                   className="text-base"
                   onSelect={(value) => {
                     setSelectedDestination(
-                      destinations.find(
+                      experiences.find(
                         (priority) => priority.value === value,
                       ) || null,
                     );
                     setOpen(false);
                   }}
                 >
-                  <destination.icon
+                  <experience.icon
                     className={cn(
                       "mr-5 h-4 w-4",
-                      destination.value === selectedDestination?.value
+                      experience.value === selectedDestination?.value
                         ? "opacity-100"
                         : "opacity-40",
                     )}
                   />
-                  <span>{destination.label}</span>
+                  <span>{experience.label}</span>
                 </CommandItem>
               ))}
             </CommandGroup>
