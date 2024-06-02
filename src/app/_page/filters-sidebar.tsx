@@ -7,6 +7,8 @@ import {
 } from "@headlessui/react";
 import { MinusIcon, PlusIcon } from "@heroicons/react/20/solid";
 
+import { cn } from "@/utils";
+
 const sortOptions = [
   { name: "Most Popular", href: "#", current: true },
   { name: "Best Rating", href: "#", current: false },
@@ -61,7 +63,7 @@ const filters = [
 
 export function FiltersSidebar() {
   return (
-    <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
+    <div className={cn("grid grid-cols-1 gap-x-8 gap-y-10")}>
       {/* Filters */}
       <form className="hidden lg:block">
         <h3 className="sr-only">Categories</h3>
@@ -125,9 +127,6 @@ export function FiltersSidebar() {
           </Disclosure>
         ))}
       </form>
-
-      {/* Product grid */}
-      <div className="lg:col-span-3">{/* Your content */}</div>
     </div>
   );
 }
