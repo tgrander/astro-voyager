@@ -3,14 +3,6 @@
 import * as React from "react";
 
 import {
-  ArrowUpCircle,
-  CheckCircle2,
-  Circle,
-  HelpCircle,
-  LucideIcon,
-  XCircle,
-} from "lucide-react";
-import {
   Command,
   CommandEmpty,
   CommandGroup,
@@ -18,48 +10,17 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
+import {
+  Destination as DestinationListItem,
+  destinations,
+} from "@/data/search";
 
 import { cn } from "@/lib/utils";
 
-type Status = {
-  value: string;
-  label: string;
-  icon: LucideIcon;
-};
-
-const statuses: Status[] = [
-  {
-    value: "backlog",
-    label: "Backlog",
-    icon: HelpCircle,
-  },
-  {
-    value: "todo",
-    label: "Todo",
-    icon: Circle,
-  },
-  {
-    value: "in progress",
-    label: "In Progress",
-    icon: ArrowUpCircle,
-  },
-  {
-    value: "done",
-    label: "Done",
-    icon: CheckCircle2,
-  },
-  {
-    value: "canceled",
-    label: "Canceled",
-    icon: XCircle,
-  },
-];
-
 export function Destination() {
   const [open, setOpen] = React.useState(false);
-  const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(
-    null,
-  );
+  const [selectedStatus, setSelectedStatus] =
+    React.useState<DestinationListItem | null>(null);
 
   return (
     <div className="flex items-center space-x-4">
@@ -71,28 +32,28 @@ export function Destination() {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup>
-            {statuses.map((status) => (
+            {destinations.map((destination) => (
               <CommandItem
-                key={status.value}
-                value={status.value}
+                key={destination.value}
+                value={destination.value}
                 className="text-base"
                 onSelect={(value) => {
                   setSelectedStatus(
-                    statuses.find((priority) => priority.value === value) ||
+                    destinations.find((priority) => priority.value === value) ||
                       null,
                   );
                   setOpen(false);
                 }}
               >
-                <status.icon
+                <destination.icon
                   className={cn(
                     "mr-5 h-4 w-4",
-                    status.value === selectedStatus?.value
+                    destination.value === selectedStatus?.value
                       ? "opacity-100"
                       : "opacity-40",
                   )}
                 />
-                <span>{status.label}</span>
+                <span>{destination.label}</span>
               </CommandItem>
             ))}
           </CommandGroup>
