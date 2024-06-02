@@ -35,16 +35,22 @@ export function Destination() {
         <Button
           variant="outline"
           role="combobox"
+          size="lg"
           aria-expanded={open}
-          className="w-[200px] justify-between"
+          className="w-fit justify-between rounded-full"
         >
-          {selectedDestination ? (
-            destinations.find(
-              (destination) => destination.value === selectedDestination.value,
-            )?.label
-          ) : (
-            <p className="text-base text-white/80">Add destination</p>
-          )}
+          <p
+            className={cn("text-base text-white", {
+              "text-white/80": !selectedDestination,
+            })}
+          >
+            {selectedDestination
+              ? destinations.find(
+                  (destination) =>
+                    destination.value === selectedDestination.value,
+                )?.label
+              : "Add destination..."}
+          </p>
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
