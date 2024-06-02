@@ -6,6 +6,7 @@ import {
   MenuItem,
 } from "@/components/ui/aceternity/navbar-menu";
 
+import { Destination } from "./search-bar/";
 import type { PlanetsSearch } from "@/api/types";
 import { api } from "@/trpc/react";
 import { cn } from "@/utils/cn";
@@ -38,11 +39,7 @@ function Navbar({
     >
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Destination">
-          <div className="grid grid-cols-2 gap-10 p-4 text-sm">
-            {/* {planets.map((planet) => (
-              <PlanetCard key={planet.id} planet={planet} />
-            ))} */}
-          </div>
+          <Destination />
         </MenuItem>
 
         <MenuItem setActive={setActive} active={active} item="Dates">
