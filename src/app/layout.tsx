@@ -2,7 +2,8 @@ import "@/styles/globals.css";
 
 import { Inter } from "next/font/google";
 import { Providers } from "@/app/providers";
-import { StickyTop } from "./_layout/sidebar-layout/sticky-top";
+// import { StickyTop } from "./_layout/sidebar-layout/sticky-top";
+import { TopNav } from "@/components/browse-destinations";
 import { cn } from "@/utils";
 
 const inter = Inter({
@@ -38,7 +39,7 @@ export default function RootLayout({
       >
         <Providers>
           <div className="flex min-h-screen flex-col">
-            <StickyTop />
+            <TopNav />
             {children}
           </div>
         </Providers>

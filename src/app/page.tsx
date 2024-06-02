@@ -19,11 +19,6 @@ export default async function Home() {
       )}
     >
       <div className="margin-auto w-full">
-        {/* Sidebar Filters */}
-        {/* <div className="fixed left-0 top-0 h-full w-80 p-8">
-          <FiltersSidebar />
-        </div> */}
-
         {/* Destinations */}
         <div>
           <DestinationsList destinations={destinations} />
