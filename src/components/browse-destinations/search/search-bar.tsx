@@ -38,7 +38,11 @@ function Navbar({
       className={cn("fixed inset-x-0 top-10 z-50 mx-auto max-w-2xl", className)}
     >
       <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Destination">
+        <MenuItem
+          setActive={setActive}
+          active={"Destination"}
+          item="Destination"
+        >
           <Destination />
         </MenuItem>
 

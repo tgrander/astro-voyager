@@ -3,6 +3,14 @@
 import * as React from "react";
 
 import {
+  ArrowUpCircle,
+  CheckCircle2,
+  Circle,
+  HelpCircle,
+  LucideIcon,
+  XCircle,
+} from "lucide-react";
+import {
   Command,
   CommandEmpty,
   CommandGroup,
@@ -11,103 +19,136 @@ import {
   CommandList,
 } from "@/components/ui/command";
 
-import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const frameworks = [
+type Status = {
+  value: string;
+  label: string;
+  icon: LucideIcon;
+};
+
+const statuses: Status[] = [
   {
-    value: "next.js",
-    label: "Next.js",
+    value: "backlog",
+    label: "Backlog",
+    icon: HelpCircle,
   },
   {
-    value: "sveltekit",
-    label: "SvelteKit",
+    value: "todo",
+    label: "Todo",
+    icon: Circle,
   },
   {
-    value: "nuxt.js",
-    label: "Nuxt.js",
+    value: "in progress",
+    label: "In Progress",
+    icon: ArrowUpCircle,
   },
   {
-    value: "remix",
-    label: "Remix",
+    value: "done",
+    label: "Done",
+    icon: CheckCircle2,
   },
   {
-    value: "astro",
-    label: "Astro",
+    value: "canceled",
+    label: "Canceled",
+    icon: XCircle,
   },
 ];
 
 export function Destination() {
   const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState("");
+  const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(
+    null,
+  );
 
   return (
-    <Command>
-      <CommandInput placeholder="Search framework..." />
-      <CommandEmpty>No framework found.</CommandEmpty>
-      <CommandGroup>
+    <div className="flex items-center space-x-4">
+      <Command>
+        <CommandInput
+          placeholder="Search destination..."
+          className="text-base"
+        />
         <CommandList>
-          {frameworks.map((framework) => (
-            <CommandItem
-              key={framework.value}
-              value={framework.value}
-              onSelect={(currentValue) => {
-                setValue(currentValue === value ? "" : currentValue);
-                setOpen(false);
-              }}
-            >
-              <Check
-                className={cn(
-                  "mr-2 h-4 w-4",
-                  value === framework.value ? "opacity-100" : "opacity-0",
-                )}
-              />
-              {framework.label}
-            </CommandItem>
-          ))}
+          <CommandEmpty>No results found.</CommandEmpty>
+          <CommandGroup>
+            {statuses.map((status) => (
+              <CommandItem
+                key={status.value}
+                value={status.value}
+                className="text-base"
+                onSelect={(value) => {
+                  setSelectedStatus(
+                    statuses.find((priority) => priority.value === value) ||
+                      null,
+                  );
+                  setOpen(false);
+                }}
+              >
+                <status.icon
+                  className={cn(
+                    "mr-5 h-4 w-4",
+                    status.value === selectedStatus?.value
+                      ? "opacity-100"
+                      : "opacity-40",
+                  )}
+                />
+                <span>{status.label}</span>
+              </CommandItem>
+            ))}
+          </CommandGroup>
         </CommandList>
-      </CommandGroup>
-    </Command>
-    // <Popover open={open} onOpenChange={setOpen}>
-    //   <PopoverTrigger asChild>
-    //     <Button
-    //       variant="outline"
-    //       role="combobox"
-    //       aria-expanded={open}
-    //       className="w-[200px] justify-between"
-    //     >
-    //       {value
-    //         ? frameworks.find((framework) => framework.value === value)?.label
-    //         : "Select framework..."}
-    //       <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
-    //     </Button>
-    //   </PopoverTrigger>
-    //   <PopoverContent className="w-[200px] p-0">
-    //     <Command>
-    //       <CommandInput placeholder="Search framework..." />
-    //       <CommandEmpty>No framework found.</CommandEmpty>
-    //       <CommandGroup>
-    //         {frameworks.map((framework) => (
-    //           <CommandItem
-    //             key={framework.value}
-    //             value={framework.value}
-    //             onSelect={(currentValue) => {
-    //               setValue(currentValue === value ? "" : currentValue);
-    //               setOpen(false);
-    //             }}
-    //           >
-    //             <Check
-    //               className={cn(
-    //                 "mr-2 h-4 w-4",
-    //                 value === framework.value ? "opacity-100" : "opacity-0",
-    //               )}
-    //             />
-    //             {framework.label}
-    //           </CommandItem>
-    //         ))}
-    //       </CommandGroup>
-    //     </Command>
-    //   </PopoverContent>
-    // </Popover>
+      </Command>
+      {/* <Popover open={open} onOpenChange={setOpen}>
+        <PopoverTrigger asChild>
+          <Button
+            variant="outline"
+            size="sm"
+            className="w-[150px] justify-start"
+          >
+            {selectedStatus ? (
+              <>
+                <selectedStatus.icon className="mr-2 h-4 w-4 shrink-0" />
+                {selectedStatus.label}
+              </>
+            ) : (
+              <>Destination</>
+            )}
+          </Button>
+        </PopoverTrigger>
+        <PopoverContent className="p-0" side="bottom" align="start">
+          <Command>
+            <CommandInput placeholder="Change status..." />
+            <CommandList>
+              <CommandEmpty>No results found.</CommandEmpty>
+              <CommandGroup>
+                {statuses.map((status) => (
+                  <CommandItem
+                    key={status.value}
+                    value={status.value}
+                    onSelect={(value) => {
+                      setSelectedStatus(
+                        statuses.find((priority) => priority.value === value) ||
+                          null,
+                      );
+                      setOpen(false);
+                    }}
+                  >
+                    <status.icon
+                      className={cn(
+                        "mr-2 h-4 w-4",
+                        status.value === selectedStatus?.value
+                          ? "opacity-100"
+                          : "opacity-40",
+                      )}
+                    />
+                    <span>{status.label}</span>
+                  </CommandItem>
+                ))}
+              </CommandGroup>
+            </CommandList>
+          </Command>
+        </PopoverContent>
+      </Popover> */}
+    </div>
   );
 }

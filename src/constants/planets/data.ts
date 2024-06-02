@@ -1,13 +1,5 @@
 import type { NewPlanet } from "@/server/db/helpers";
 
-const bgImage: Record<string, string> = {
-  neonix: "skywalker/planets/backgrounds/neonix/r9yqkrkuphdarqbsicpb",
-  caelux: "skywalker/planets/backgrounds/caelux/jpmrn3gyxljzg4y1g9dx",
-  seraphis: "skywalker/planets/backgrounds/udq11nhkcaml0awiaxrt",
-  valyrian: "skywalker/planets/backgrounds/nxkgjgpr7a5ddelhed50",
-  aquarion: "skywalker/planets/backgrounds/twyvxjy5dnriq05wtpzx",
-};
-
 // alien planets
 const data: NewPlanet[] = [
   // Neonix
@@ -263,6 +255,14 @@ const data: NewPlanet[] = [
     heroImage: "skywalker/icons/planets/pink_rzeft1",
   },
 ];
+
+const bgImage: Record<string, string> = {
+  neonix: "skywalker/planets/backgrounds/neonix/r9yqkrkuphdarqbsicpb",
+  caelux: "skywalker/planets/backgrounds/caelux/jpmrn3gyxljzg4y1g9dx",
+  seraphis: "skywalker/planets/backgrounds/udq11nhkcaml0awiaxrt",
+  valyrian: "skywalker/planets/backgrounds/nxkgjgpr7a5ddelhed50",
+  aquarion: "skywalker/planets/backgrounds/twyvxjy5dnriq05wtpzx",
+};
 
 export const planetData: NewPlanet[] = data.map((planet) => ({
   ...planet,

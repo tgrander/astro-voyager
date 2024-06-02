@@ -1,11 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-
 import type { LinkProps } from "next/link";
+import React from "react";
+import { motion } from "framer-motion";
+
 const transition = {
   type: "spring",
   mass: 0.5,
@@ -49,7 +49,7 @@ export const MenuItem = ({
               >
                 <motion.div
                   layout // layout ensures smooth animation
-                  className="h-full w-max p-4"
+                  className="h-full w-max"
                 >
                   {children}
                 </motion.div>
