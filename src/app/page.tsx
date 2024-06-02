@@ -19,14 +19,16 @@ export default async function Home() {
         "bg-cover bg-center bg-no-repeat",
       )}
     >
-      {/* Sidebar Filters */}
-      <div className="fixed left-0 top-0 h-full w-80 p-8">
-        <FiltersSidebar />
-      </div>
+      <div>
+        {/* Sidebar Filters */}
+        <div className="fixed left-0 top-0 h-full w-80 p-8">
+          <FiltersSidebar />
+        </div>
 
-      {/* Destinations */}
-      <div className="pl-80">
-        <DestinationsList destinations={destinations} />
+        {/* Destinations */}
+        <div className="pl-80">
+          <DestinationsList destinations={destinations} />
+        </div>
       </div>
     </div>
   );

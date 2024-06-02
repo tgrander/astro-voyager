@@ -7,6 +7,7 @@ import {
 } from "@headlessui/react";
 import { MinusIcon, PlusIcon } from "@heroicons/react/20/solid";
 
+import { DistanceFromEarth } from "./filters";
 import { cn } from "@/utils";
 
 const sortOptions = [
@@ -65,8 +66,15 @@ export function FiltersSidebar() {
   return (
     <div className={cn("grid grid-cols-1 gap-x-8 gap-y-10")}>
       {/* Filters */}
-      <form className="hidden lg:block">
-        <h3 className="sr-only">Categories</h3>
+      <form className="hidden lg:flex lg:flex-col">
+        {/* Distance from Earth */}
+        <div>
+          <DistanceFromEarth />
+        </div>
+
+        {/* Other */}
+
+        {/* <h3 className="sr-only">Categories</h3>
         <ul
           role="list"
           className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium"
@@ -76,7 +84,7 @@ export function FiltersSidebar() {
               <a href={category.href}>{category.name}</a>
             </li>
           ))}
-        </ul>
+        </ul> */}
 
         {filters.map((section) => (
           <Disclosure

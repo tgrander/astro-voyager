@@ -1,8 +1,8 @@
 import "@/styles/globals.css";
 
 import { Inter } from "next/font/google";
-
 import { Providers } from "@/app/providers";
+import { StickyTop } from "./_layout/sidebar-layout/sticky-top";
 import { cn } from "@/utils";
 
 const inter = Inter({
@@ -37,8 +37,10 @@ export default function RootLayout({
         )}
       >
         <Providers>
-          {/* <SidebarLayout>{children}</SidebarLayout> */}
-          <div className="flex min-h-screen flex-col">{children}</div>
+          <div className="flex min-h-screen flex-col">
+            <StickyTop />
+            {children}
+          </div>
         </Providers>
       </body>
     </html>
