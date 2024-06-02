@@ -1,5 +1,4 @@
-import { DestinationsList, FiltersSidebar } from "./_page";
-
+import { DestinationsList } from "./_page";
 import { api } from "@/trpc/server";
 import { cn } from "@/utils";
 
@@ -19,14 +18,14 @@ export default async function Home() {
         "bg-cover bg-center bg-no-repeat",
       )}
     >
-      <div>
+      <div className="margin-auto w-full">
         {/* Sidebar Filters */}
-        <div className="fixed left-0 top-0 h-full w-80 p-8">
+        {/* <div className="fixed left-0 top-0 h-full w-80 p-8">
           <FiltersSidebar />
-        </div>
+        </div> */}
 
         {/* Destinations */}
-        <div className="pl-80">
+        <div>
           <DestinationsList destinations={destinations} />
         </div>
       </div>

@@ -3,25 +3,32 @@ import { Slider } from "@nextui-org/slider";
 export function DistanceFromEarth() {
   return (
     <Slider
-      label="Select a value"
-      color="foreground"
-      size="sm"
+      label="Distance from Earth"
+      color="primary"
+      size="md"
       step={10}
       marks={[
         {
-          value: 20,
-          label: "20%",
+          value: 0,
+          label: "< 10 light years",
         },
         {
-          value: 50,
-          label: "50%",
+          value: 33,
+          label: "10 - 50 light years",
         },
         {
-          value: 80,
-          label: "80%",
+          value: 66,
+          label: "50 - 100 light years",
+        },
+        {
+          value: 100,
+          label: "> 100 light years",
         },
       ]}
-      defaultValue={20}
+      defaultValue={0}
+      minValue={0}
+      maxValue={100}
+      showTooltip={true}
       className="max-w-md"
     />
   );

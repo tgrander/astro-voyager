@@ -1,25 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
-
 import {
   HoveredLink,
   Menu,
   MenuItem,
-  ProductItem,
 } from "@/components/ui/aceternity/navbar-menu";
-import { api } from "@/trpc/react";
-import { cn } from "@/utils/cn";
 
 import { PlanetCard } from "./navbar-search/planet-card";
-
 import type { PlanetsSearch } from "@/api/types";
+import { api } from "@/trpc/react";
+import { cn } from "@/utils/cn";
+import { useState } from "react";
+
 export function NavbarSearch() {
   const planetsQuery = api.planet.search.useQuery();
 
   const planets = planetsQuery.data ?? [];
-
-  console.log("planets", planets);
 
   return (
     <div className="relative flex w-full items-center justify-center">

@@ -1,13 +1,10 @@
 "use client";
 
-import React from "react";
-
-import { useBrowseDestinationsStore } from "@/state/destinations";
-import { cn } from "@/utils";
-
 import { DestinationListingCard } from "./destination-listing-card";
-
 import type { DestinationsSearch } from "@/api/types";
+import React from "react";
+import { cn } from "@/utils";
+import { useBrowseDestinationsStore } from "@/state/destinations";
 
 interface Props {
   destinations: DestinationsSearch;
