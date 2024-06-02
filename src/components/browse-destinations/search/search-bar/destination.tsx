@@ -37,7 +37,9 @@ export function Destination() {
           role="combobox"
           size="lg"
           aria-expanded={open}
-          className="flex w-fit items-center justify-center rounded-full"
+          className={cn("flex w-fit items-center justify-center rounded-full", {
+            "border-white": !!selectedDestination,
+          })}
         >
           <p
             className={cn("text-base text-white", {
