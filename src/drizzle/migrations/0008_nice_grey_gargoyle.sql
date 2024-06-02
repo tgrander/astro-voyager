@@ -1,1 +1,0 @@
-ALTER TABLE "astro_planets" ALTER COLUMN "id" SET DATA TYPE serial;

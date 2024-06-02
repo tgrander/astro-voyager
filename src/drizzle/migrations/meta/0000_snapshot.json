@@ -1,5 +1,5 @@
 {
-  "id": "c37e5463-2b91-4101-ad45-53d7f93e89f2",
+  "id": "0ad5bfb0-0c12-4949-8e2a-2b179054bd60",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -16,6 +16,12 @@
         },
         "name": {
           "name": "name",
+          "type": "varchar(155)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "slug": {
+          "name": "slug",
           "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
@@ -26,21 +32,15 @@
           "primaryKey": false,
           "notNull": true
         },
-        "location": {
-          "name": "location",
-          "type": "varchar(255)",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "coordinates": {
-          "name": "coordinates",
-          "type": "varchar(100)",
+        "planet": {
+          "name": "planet",
+          "type": "jsonb",
           "primaryKey": false,
           "notNull": true
         },
         "distance_from_earth": {
           "name": "distance_from_earth",
-          "type": "bigint",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
         },
@@ -56,23 +56,17 @@
           "primaryKey": false,
           "notNull": true
         },
-        "amenities": {
-          "name": "amenities",
-          "type": "jsonb",
+        "hero_image": {
+          "name": "hero_image",
+          "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": false
         },
         "image_urls": {
           "name": "image_urls",
           "type": "jsonb",
           "primaryKey": false,
           "notNull": true
-        },
-        "virtual_tour_url": {
-          "name": "virtual_tour_url",
-          "type": "varchar(255)",
-          "primaryKey": false,
-          "notNull": false
         },
         "climate": {
           "name": "climate",
@@ -82,13 +76,19 @@
         },
         "gravity": {
           "name": "gravity",
-          "type": "numeric",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
         },
         "safety_rating": {
           "name": "safety_rating",
           "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "visitor_ratings": {
+          "name": "visitor_ratings",
+          "type": "text",
           "primaryKey": false,
           "notNull": false
         },
@@ -100,45 +100,13 @@
         },
         "average_cost_per_day": {
           "name": "average_cost_per_day",
-          "type": "numeric(10, 2)",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "booking_status": {
-          "name": "booking_status",
-          "type": "varchar(50)",
+          "type": "integer",
           "primaryKey": false,
           "notNull": true
-        },
-        "created_at": {
-          "name": "created_at",
-          "type": "timestamp",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "CURRENT_TIMESTAMP"
-        },
-        "updated_at": {
-          "name": "updated_at",
-          "type": "timestamp",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "CURRENT_TIMESTAMP"
         },
         "popular_activities": {
           "name": "popular_activities",
           "type": "jsonb",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "seasonal_variations": {
-          "name": "seasonal_variations",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "accessibility": {
-          "name": "accessibility",
-          "type": "text",
           "primaryKey": false,
           "notNull": false
         },
@@ -159,6 +127,20 @@
           "type": "jsonb",
           "primaryKey": false,
           "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
         }
       },
       "indexes": {
@@ -172,7 +154,22 @@
       },
       "foreignKeys": {},
       "compositePrimaryKeys": {},
-      "uniqueConstraints": {}
+      "uniqueConstraints": {
+        "astro_destinations_name_unique": {
+          "name": "astro_destinations_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "name"
+          ]
+        },
+        "astro_destinations_slug_unique": {
+          "name": "astro_destinations_slug_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "slug"
+          ]
+        }
+      }
     },
     "astro_spacecrafts": {
       "name": "astro_spacecrafts",
@@ -187,6 +184,12 @@
         "name": {
           "name": "name",
           "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "slug": {
+          "name": "slug",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
         },
@@ -360,6 +363,197 @@
       },
       "foreignKeys": {},
       "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "astro_spacecrafts_name_unique": {
+          "name": "astro_spacecrafts_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "name"
+          ]
+        },
+        "astro_spacecrafts_slug_unique": {
+          "name": "astro_spacecrafts_slug_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "slug"
+          ]
+        }
+      }
+    },
+    "astro_planets": {
+      "name": "astro_planets",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "slug": {
+          "name": "slug",
+          "type": "varchar(300)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "type": {
+          "name": "type",
+          "type": "celestial_type",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "species": {
+          "name": "species",
+          "type": "planet_species",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "location": {
+          "name": "location",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "distance_from_sun": {
+          "name": "distance_from_sun",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "orbital_period": {
+          "name": "orbital_period",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rotation_period": {
+          "name": "rotation_period",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "diameter": {
+          "name": "diameter",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "climate": {
+          "name": "climate",
+          "type": "varchar(300)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gravity": {
+          "name": "gravity",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "moons": {
+          "name": "moons",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ring_system": {
+          "name": "ring_system",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "icon_image": {
+          "name": "icon_image",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hero_image": {
+          "name": "hero_image",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "image_urls": {
+          "name": "image_urls",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "discovery_date": {
+          "name": "discovery_date",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "discovered_by": {
+          "name": "discovered_by",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "notable_features": {
+          "name": "notable_features",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "habitability": {
+          "name": "habitability",
+          "type": "varchar(300)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "atmosphere": {
+          "name": "atmosphere",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "name": "status",
+          "type": "planet_status",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        }
+      },
+      "indexes": {
+        "planets_idx": {
+          "name": "planets_idx",
+          "columns": [
+            "id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     }
   },
@@ -393,6 +587,44 @@
         "FTL Starship": "FTL Starship",
         "Amphibious Vehicle": "Amphibious Vehicle",
         "Orbital Station Transfer": "Orbital Station Transfer"
+      }
+    },
+    "celestial_type": {
+      "name": "celestial_type",
+      "values": {
+        "Terrestrial Planet": "Terrestrial Planet",
+        "Gas Giant": "Gas Giant",
+        "Ice Giant": "Ice Giant",
+        "Dwarf Planet": "Dwarf Planet",
+        "Moon": "Moon",
+        "Star": "Star",
+        "Variable Star": "Variable Star",
+        "Nebula": "Nebula",
+        "Quasar": "Quasar",
+        "Black Hole": "Black Hole",
+        "Asteroid": "Asteroid",
+        "Comet": "Comet",
+        "Artificial": "Artificial"
+      }
+    },
+    "planet_species": {
+      "name": "planet_species",
+      "values": {
+        "Alien": "Alien",
+        "Human": "Human",
+        "Robotic": "Robotic",
+        "Hybrid": "Hybrid",
+        "Unknown": "Unknown"
+      }
+    },
+    "planet_status": {
+      "name": "planet_status",
+      "values": {
+        "Open for Visits": "Open for Visits",
+        "Open for Observation": "Open for Observation",
+        "Research Only": "Research Only",
+        "Restricted": "Restricted",
+        "Closed": "Closed"
       }
     }
   },

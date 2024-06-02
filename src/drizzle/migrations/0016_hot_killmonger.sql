@@ -1,1 +1,0 @@
-ALTER TABLE "astro_planets" ADD COLUMN "icon_image" text;

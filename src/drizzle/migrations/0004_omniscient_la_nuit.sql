@@ -1,1 +1,0 @@
-ALTER TABLE "astro_destinations" ADD COLUMN "planet" jsonb NOT NULL;

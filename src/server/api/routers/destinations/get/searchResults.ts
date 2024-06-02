@@ -1,6 +1,5 @@
-import { z } from "zod";
-
 import { publicProcedure } from "@/server/api/trpc";
+import { z } from "zod";
 
 ////////////////////////
 // TYPES
@@ -26,27 +25,5 @@ export const search = publicProcedure
   .query(async ({ ctx }) => {
     const results = await ctx.db.query.destinations.findMany();
 
-    const targetDestinationSlug = "quantum-quasar-arcade";
-
-    const targetDestination = results.find(
-      (destination) => destination.slug === targetDestinationSlug,
-    );
-
-    if (!targetDestination) {
-      throw new Error("Target Destination not found");
-    }
-
-    const modifiedResults = [
-      targetDestination,
-      ...results.filter(
-        (destination) => destination.slug !== targetDestinationSlug,
-      ),
-    ];
-
-    return modifiedResults.map((dest) => {
-      return {
-        ...dest,
-        imageUrls: dest.imageUrls.filter((url) => url !== dest.heroImage),
-      };
-    });
+    return results;
   });

@@ -1,1 +1,0 @@
-ALTER TABLE "astro_planets" ALTER COLUMN "distance_from_sun" SET DATA TYPE text;
